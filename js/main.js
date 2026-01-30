@@ -878,7 +878,7 @@ const worksData = {
     'work4': {
         title: '香蘭ファッション専門学校様',
         year: '2024',
-        images: ['images/work4.png', 'images/work1.png', 'images/work2.png', 'images/work3.png'],
+        images: ['images/work4.png', 'images/work37.png', 'images/work2.png', 'images/work3.png'],
         description: `
             <h4>概要</h4>
             <p>香蘭ファッションデザイン専門学校の公式Webページに使用される、ファーストビュー映像を制作。</p>
@@ -892,7 +892,7 @@ const worksData = {
     'work5': {
         title: 'CGWORLD 2024年.6月号 掲載',
         year: '2024',
-        images: ['images/work24.png', 'images/work5.png', 'images/work7.png', 'images/work8.png'],
+        images: ['images/work24.png', 'images/work5.png', 'images/work39.png', 'images/work8.png'],
         description: `
             <h4>概要</h4>
             <p>2022年10月頃にXで上げていた作品をCGWORLDの担当さんに見つけていただき掲載の流れになりました。</p>
@@ -907,7 +907,7 @@ const worksData = {
     'work6': {
         title: '東京国際プロジェクションマッピングアワード vol.10 審査員賞',
         year: '2024',
-        images: ['images/work7.png', 'images/work8.png', 'images/work9.png', 'images/work1.png'],
+        images: ['images/work41.png', 'images/work7.png', 'images/work42.png', 'images/work43.png'],
         description: `
             <h4>概要</h4>
             <p>クラシックなバイクの3Dモデリング。レトロなデザインとモダンな技術の融合をテーマに制作しました。</p>
@@ -923,7 +923,7 @@ const worksData = {
     'work7': {
         title: 'CHASE',
         year: '2024',
-        images: ['images/work8.png', 'images/work9.png', 'images/work1.png', 'images/work2.png'],
+        images: ['images/work28.png', 'images/work8.png', 'images/work1.png', 'images/work2.png'],
         description: `
             <h4>概要</h4>
             <p>自主制作プロジェクト「都市探検ドローン」。コンセプトは「狭小空間での調査活動」。</p>
