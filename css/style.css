@@ -1990,7 +1990,15 @@ footer {
         width: 100%;
         height: auto;
         object-fit: contain;
-        content: url('../images/sumahoyou.png'); /* Mobile specific image */
+    }
+    
+    /* スマホ専用の背景画像設定 */
+    .main-visual {
+        background: url('../images/sumahoyou.png') center/contain no-repeat;
+    }
+    
+    .main-visual img {
+        opacity: 0;
     }
     
     .skill-line {
