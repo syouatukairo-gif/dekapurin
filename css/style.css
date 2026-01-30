@@ -1591,7 +1591,7 @@ footer {
         gap: 1rem;
         align-items: center;
     }
-
+}
     /* 追加のモバイル最適化 */
 @media (max-width: 768px) {
     /* タッチ操作の改善 */
