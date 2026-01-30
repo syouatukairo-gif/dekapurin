@@ -48,7 +48,7 @@ function initMobileMenu() {
     console.log('Mobile menu init:', { menuToggle, sideNav, navLinks });
     
     if (!menuToggle || !sideNav) {
-        console.error('Menu elements not found:', { menuToggle, sideNav });
+        console.error('Mobile menu elements not found:', { menuToggle, sideNav });
         return;
     }
     
@@ -56,42 +56,45 @@ function initMobileMenu() {
     menuToggle.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Menu toggle clicked');
+        console.log('Mobile menu toggle clicked');
         
-        // 現在の状態を確認
+        // 
         const isActive = sideNav.classList.contains('active');
-        console.log('Current state:', isActive);
+        console.log('Mobile menu current state:', isActive);
         
-        menuToggle.classList.toggle('active');
-        sideNav.classList.toggle('active');
+        // 
+        if (isActive) {
+            sideNav.classList.remove('active');
+            menuToggle.classList.remove('active');
+        } else {
+            sideNav.classList.add('active');
+            menuToggle.classList.add('active');
+        }
         
-        // 新しい状態を確認
+        // 
         const newActiveState = sideNav.classList.contains('active');
-        console.log('New state:', newActiveState);
+        console.log('Mobile menu new state:', newActiveState);
         
-        // メニューの位置情報を確認
-        const rect = sideNav.getBoundingClientRect();
-        console.log('Menu position:', {
-            left: rect.left,
-            right: rect.right,
-            width: rect.width,
-            visible: rect.left >= 0
-        });
+        // 
+        const computedStyle = window.getComputedStyle(sideNav);
+        console.log('Mobile menu display style:', computedStyle.display);
     });
     
     // Close menu when clicking on a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
+            console.log('Mobile menu link clicked, closing menu');
             sideNav.classList.remove('active');
+            menuToggle.classList.remove('active');
         });
     });
     
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!menuToggle.contains(e.target) && !sideNav.contains(e.target)) {
-            menuToggle.classList.remove('active');
+            console.log('Clicked outside mobile menu, closing menu');
             sideNav.classList.remove('active');
+            menuToggle.classList.remove('active');
         }
     });
 }
@@ -108,12 +111,12 @@ function fixMobileViewportHeight() {
             const actualHeight = window.innerHeight;
             coverSection.style.height = `${actualHeight}px`;
             coverSection.style.minHeight = `${actualHeight}px`;
+            coverSection.style.padding = '0';
         }
         
-        // Update sections height
-        const sections = document.querySelectorAll('section');
+        // Update sections height (excluding cover)
+        const sections = document.querySelectorAll('section:not(.cover)');
         sections.forEach(section => {
-            if (section.classList.contains('cover')) return;
             const actualHeight = window.innerHeight;
             section.style.paddingTop = `${actualHeight}px`;
             section.style.minHeight = `${actualHeight}px`;
