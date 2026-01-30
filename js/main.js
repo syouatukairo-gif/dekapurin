@@ -45,12 +45,23 @@ function initMobileMenu() {
     const sideNav = document.querySelector('.side-nav');
     const navLinks = document.querySelectorAll('.side-nav a');
     
-    if (!menuToggle || !sideNav) return;
+    console.log('Mobile menu init:', { menuToggle, sideNav, navLinks });
+    
+    if (!menuToggle || !sideNav) {
+        console.error('Menu elements not found:', { menuToggle, sideNav });
+        return;
+    }
     
     // Toggle menu
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('Menu toggle clicked');
         menuToggle.classList.toggle('active');
         sideNav.classList.toggle('active');
+        console.log('Menu classes:', {
+            toggleActive: menuToggle.classList.contains('active'),
+            navActive: sideNav.classList.contains('active')
+        });
     });
     
     // Close menu when clicking on a link

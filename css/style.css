@@ -368,28 +368,35 @@ header {
     width: auto;
 }
 
-.side-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-}
-
-.side-nav a {
-    text-decoration: none;
-    color: #666;
-    font-weight: 650;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    transition: color 0.3s ease;
-    writing-mode: horizontal-tb;
-    text-orientation: mixed;
-}
-
-.side-nav a:hover,
-.side-nav a.active {
-    color: #000;
+/* PC用side-nav設定 */
+@media (min-width: 769px) {
+    .side-nav {
+        width: auto;
+    }
+    
+    .side-nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .side-nav a {
+        text-decoration: none;
+        color: #666;
+        font-weight: 650;
+        font-size: 1rem;
+        letter-spacing: 0.05em;
+        transition: color 0.3s ease;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+    }
+    
+    .side-nav a:hover,
+    .side-nav a.active {
+        color: #000;
+    }
 }
 
 main {
