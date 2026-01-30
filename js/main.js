@@ -41,26 +41,39 @@ function initLoadingAnimation() {
 
 // Mobile Menu Toggle
 function initMobileMenu() {
-    const menuTrigger = document.querySelector('.menu-trigger');
-    const menuNav = document.querySelector('.menu-nav');
-    const menuOptions = document.querySelectorAll('.menu-option');
+    // 左下のメニュー
+    const menuTrigger = document.querySelector('.menu-ui:not(.menu-ui-right) .menu-trigger');
+    const menuNav = document.querySelector('.menu-ui:not(.menu-ui-right) .menu-nav');
+    const menuOptions = document.querySelectorAll('.menu-ui:not(.menu-ui-right) .menu-option');
     
     console.log('Mobile menu init:', { menuTrigger, menuNav, menuOptions });
     
-    if (!menuTrigger || !menuNav) {
-        console.error('Mobile menu elements not found:', { menuTrigger, menuNav });
-        return;
+    if (menuTrigger && menuNav) {
+        setupMenu(menuTrigger, menuNav, menuOptions, 'left');
     }
     
+    // 右下のメニュー
+    const menuTriggerRight = document.querySelector('.menu-ui-right .menu-trigger');
+    const menuNavRight = document.querySelector('.menu-ui-right .menu-nav');
+    const menuOptionsRight = document.querySelectorAll('.menu-ui-right .menu-option');
+    
+    console.log('Mobile menu right init:', { menuTriggerRight, menuNavRight, menuOptionsRight });
+    
+    if (menuTriggerRight && menuNavRight) {
+        setupMenu(menuTriggerRight, menuNavRight, menuOptionsRight, 'right');
+    }
+}
+
+function setupMenu(menuTrigger, menuNav, menuOptions, position) {
     // Toggle menu
     menuTrigger.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Mobile menu trigger clicked');
+        console.log(`Mobile menu ${position} trigger clicked`);
         
         // 現在の状態を確認
         const isActive = menuNav.classList.contains('active');
-        console.log('Mobile menu current state:', isActive);
+        console.log(`Mobile menu ${position} current state:`, isActive);
         
         // クラスをトグル
         if (isActive) {
@@ -73,17 +86,17 @@ function initMobileMenu() {
         
         // 新しい状態を確認
         const newActiveState = menuNav.classList.contains('active');
-        console.log('Mobile menu new state:', newActiveState);
+        console.log(`Mobile menu ${position} new state:`, newActiveState);
         
         // メニューの表示状態を確認
         const computedStyle = window.getComputedStyle(menuNav);
-        console.log('Mobile menu display style:', computedStyle.display);
+        console.log(`Mobile menu ${position} display style:`, computedStyle.display);
     });
     
     // Close menu when clicking on a menu option
     menuOptions.forEach(option => {
         option.addEventListener('click', () => {
-            console.log('Mobile menu option clicked, closing menu');
+            console.log(`Mobile menu ${position} option clicked, closing menu`);
             
             // Get the target section from data-lang attribute
             const targetId = option.getAttribute('data-lang');
@@ -117,7 +130,7 @@ function initMobileMenu() {
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!menuTrigger.contains(e.target) && !menuNav.contains(e.target)) {
-            console.log('Clicked outside mobile menu, closing menu');
+            console.log(`Clicked outside mobile menu ${position}, closing menu`);
             menuNav.classList.remove('active');
             menuTrigger.classList.remove('active');
         }
