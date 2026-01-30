@@ -105,12 +105,19 @@ body.loading .loading-screen {
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    color: #333;
     line-height: 1.6;
-    color: #000;
     background-color: #fff;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 html {
@@ -261,7 +268,7 @@ header {
     border: 1px solid #f0f0f0;
     border-radius: 50%;
     padding: 1rem;
-    z-index: 9999;
+    z-index: 10000;
     width: 60px;
     height: 60px;
     display: flex;
@@ -309,7 +316,7 @@ header {
     background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
-    z-index: 9998;
+    z-index: 9999;
     padding: 0.5rem;
     box-sizing: border-box;
     border-radius: 12px;
@@ -366,7 +373,8 @@ main {
 
 /* トップページ（表紙） */
 .cover {
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: calc(var(--vh, 1vh) * 100);
     position: relative;
     display: flex;
     align-items: center;
@@ -589,8 +597,8 @@ main {
 
 /* セクション共通 */
 section {
-    padding: 100vh 1rem;
-    min-height: 100vh;
+    padding: calc(var(--vh, 1vh) * 100) 1rem;
+    min-height: calc(var(--vh, 1vh) * 100);
     display: flex;
     align-items: center;
     justify-content: center;

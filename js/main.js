@@ -96,12 +96,59 @@ function initMobileMenu() {
     });
 }
 
+// Fix mobile viewport height issues
+function fixMobileViewportHeight() {
+    const setViewportHeight = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        
+        // Update cover section height
+        const coverSection = document.querySelector('.cover');
+        if (coverSection) {
+            const actualHeight = window.innerHeight;
+            coverSection.style.height = `${actualHeight}px`;
+            coverSection.style.minHeight = `${actualHeight}px`;
+        }
+        
+        // Update sections height
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            if (section.classList.contains('cover')) return;
+            const actualHeight = window.innerHeight;
+            section.style.paddingTop = `${actualHeight}px`;
+            section.style.minHeight = `${actualHeight}px`;
+        });
+    };
+    
+    // Set initial height
+    setViewportHeight();
+    
+    // Update on resize and orientation change
+    window.addEventListener('resize', setViewportHeight);
+    window.addEventListener('orientationchange', setViewportHeight);
+    
+    // Update on scroll (for mobile browsers that hide/show address bar)
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                setViewportHeight();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Start loading animation immediately
     initLoadingAnimation();
     
     // Initialize mobile menu
     initMobileMenu();
+    
+    // Fix mobile viewport height
+    fixMobileViewportHeight();
     
     const navLinks = document.querySelectorAll('.side-nav a');
     const sections = document.querySelectorAll('section');
