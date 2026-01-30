@@ -288,6 +288,7 @@ header {
 
 .side-nav a:hover,
 .side-nav a.active {
+    color: #000;
 }
 
 /* スマホ用ハンバーガーメニュー */
