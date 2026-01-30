@@ -96,72 +96,12 @@ function initMobileMenu() {
     });
 }
 
-// PC用ハンバーガーメニュー
-function initPCMobileMenu() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileSideNav = document.querySelector('.mobile-side-nav');
-    const mobileNavLinks = document.querySelectorAll('.mobile-side-nav a');
-    
-    console.log('PC mobile menu init:', { mobileMenuToggle, mobileSideNav, mobileNavLinks });
-    
-    if (!mobileMenuToggle || !mobileSideNav) {
-        console.error('PC mobile menu elements not found:', { mobileMenuToggle, mobileSideNav });
-        return;
-    }
-    
-    // Toggle menu
-    mobileMenuToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('PC mobile menu toggle clicked');
-        
-        // 現在の状態を確認
-        const isActive = mobileSideNav.classList.contains('active');
-        console.log('PC mobile menu current state:', isActive);
-        
-        mobileMenuToggle.classList.toggle('active');
-        mobileSideNav.classList.toggle('active');
-        
-        // 新しい状態を確認
-        const newActiveState = mobileSideNav.classList.contains('active');
-        console.log('PC mobile menu new state:', newActiveState);
-        
-        // メニューの位置情報を確認
-        const rect = mobileSideNav.getBoundingClientRect();
-        console.log('PC mobile menu position:', {
-            left: rect.left,
-            right: rect.right,
-            width: rect.width,
-            visible: rect.left >= 0
-        });
-    });
-    
-    // Close menu when clicking on a link
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuToggle.classList.remove('active');
-            mobileSideNav.classList.remove('active');
-        });
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!mobileMenuToggle.contains(e.target) && !mobileSideNav.contains(e.target)) {
-            mobileMenuToggle.classList.remove('active');
-            mobileSideNav.classList.remove('active');
-        }
-    });
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     // Start loading animation immediately
     initLoadingAnimation();
     
     // Initialize mobile menu
     initMobileMenu();
-    
-    // Initialize PC mobile menu
-    initPCMobileMenu();
     
     const navLinks = document.querySelectorAll('.side-nav a');
     const sections = document.querySelectorAll('section');
@@ -997,7 +937,7 @@ const worksData = {
     'work7': {
         title: 'CHASE',
         year: '2024',
-        images: ['images/work28.png', 'images/work8.png', 'images/work1.png', 'images/work2.png'],
+        images: ['images/work28.png', 'images/work8.png', 'images/work44.png', 'images/work2.png'],
         description: `
             <h4>概要</h4>
             <p>自主制作プロジェクト「都市探検ドローン」。コンセプトは「狭小空間での調査活動」。</p>
@@ -1013,7 +953,7 @@ const worksData = {
     'work8': {
         title: 'U30 3DCG Vision Contest 2022',
         year: '2024',
-        images: ['images/work9.png', 'images/work1.png', 'images/work2.png', 'images/work3.png'],
+        images: ['images/work9.png', 'images/work46.png', 'images/work45.png', 'images/work3.png'],
         description: `
             <h4>概要</h4>
             <p>スキルアップのために制作した練習用モデル。テーマは「有機と無機の融合」。</p>
