@@ -377,10 +377,10 @@ main {
 .cover::before {
     content: '';
     position: absolute;
-    left: 40px;
-    top: 60px;
+    left: 5%;
+    top: 10%;
     width: 1px;
-    height: calc(100% - 120px);
+    height: 80%;
     background-color: #000;
     z-index: 2;
 }
@@ -396,29 +396,30 @@ main {
 
 /* ヘッダーテキストブロック */
 .header-text-block {
-    position: fixed;
-    top: 20px;
-    left: 20px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
     z-index: 1000;
     text-align: left;
+    max-width: 40%;
 }
 
 .header-line-1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #000;
     margin-bottom: 0.6em;
 }
 
 .header-line-2 {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-weight: 300;
     color: rgba(0, 0, 0, 0.45);
     margin-bottom: 0.6em;
 }
 
 .header-line-3 {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: #000;
 }
@@ -427,13 +428,14 @@ main {
 .subtitle-section {
     position: absolute;
     top: 30%;
-    left: 4%;
+    left: 5%;
     transform: translate(0, -50%);
     z-index: 2;
+    max-width: 40%;
 }
 
 .skill-subtitle {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #666;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -443,25 +445,28 @@ main {
 /* 背景タイポグラフィ */
 .background-text {
     position: absolute;
-    font-size: 10rem;
+    font-size: 4rem;
     font-weight: 650;
     color: #000;
     letter-spacing: -0.05em;
     z-index: 1;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    top: 15%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     pointer-events: none;
     line-height: 0.8;
+    text-align: center;
+    width: 90%;
 }
 
 /* スクロール誘導 */
 .scroll-indicator {
     position: absolute;
-    bottom: 5px;
-    left: 290px;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -470,34 +475,36 @@ main {
 }
 
 .scroll-text {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: #333;
     letter-spacing: 0.1em;
 }
 
 .scroll-arrow {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #333;
     animation: bounce 2s infinite;
 }
+
 .skill-line{
     position: absolute;
-    top: 38%;
-    left: 4%;
+    top: 70%;
+    left: 5%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 40%;
 }
 
 .skill-line-text{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 650;
     color: #000;
 }
 
 .skill-subtitle {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #999;
     margin: 0.2rem 0;
     font-weight: 300;
@@ -505,101 +512,43 @@ main {
 }
 
 .skill-description {
-    max-width: 400px;
+    max-width: 100%;
 }
 
 .skill-description p {
     margin: 0 0 0.2rem 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.7rem;
+    line-height: 1.4;
     color: #333;
 }
 
-.skill-description p:first-child {
-    margin-top: 0;
+/* メインビジュアル */
+.main-visual {
+    position: absolute;
+    z-index: 3;
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
 }
 
-.skill-description p:last-child {
-    margin-bottom: 0;
+.main-visual img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-.skill-content-toggle {
-    margin-top: 0.2rem;
+/* スマホ用背景画像設定 */
+.main-visual {
+    background: url('../images/sumahoyou.png') center/contain no-repeat;
 }
 
-.toggle-button {
-    background: none;
-    border: none;
-    color: #666;
-    font-size: 0.9rem;
-    cursor: pointer;
-    padding: 0;
-    text-decoration: underline;
-    font-family: inherit;
-    transition: color 0.2s ease;
-}
-
-.toggle-button:hover,
-.toggle-button:focus {
-    color: #333;
-    outline: none;
-}
-
-.toggle-button:focus-visible {
-    outline: 2px solid #666;
-    outline-offset: 2px;
-}
-
-.skill-content {
-    max-height: 0;
-    overflow: hidden;
+.main-visual img {
     opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
-.skill-content.expanded {
-    max-height: 300px;
-    opacity: 1;
-}
-
-.skill-content br {
-    display: block;
-    margin-bottom: 0.2rem;
-    line-height: 1.6;
-}
-
-.skill-content p {
-    margin: 0 0 0.2rem 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-.skill-content p:first-child {
-    margin-top: 0.5rem;
-}
-
-.skill-section {
-    margin-bottom: 1.5rem;
-}
-
-.skill-section h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #000;
-    margin: 0 0 0.5rem 0;
-}
-
-.skill-section p {
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-.skill-content p[data-lang="skill-desc-empty"] {
-    display: none;
-}
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -610,23 +559,6 @@ main {
     60% {
         transform: translateY(-4px);
     }
-}
-
-/* メインビジュアル */
-.main-visual {
-    position: absolute;
-    z-index: 3;
-    max-width: 60%;
-    max-height: 70vh;
-    top: 20%;
-    right: 20%;
-    transform: translateY(-50%);
-}
-
-.main-visual img {
-    width: 145%;
-    height: auto;
-    object-fit: contain;
 }
 
 /* セクションヘッダー */
