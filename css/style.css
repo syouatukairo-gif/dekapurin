@@ -1741,6 +1741,7 @@ footer {
     }
 
     .ip-banner {
+        order: 2; /* 画像を下に */
         width: 100%;
         max-width: 500px;
         height: 300px;
@@ -1750,6 +1751,7 @@ footer {
     }
 
     .ip-info-panel {
+        order: 1; /* テキストを上に */
         width: 100%;
         max-width: 500px;
         text-align: center;
