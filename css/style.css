@@ -46,7 +46,7 @@
 }
 
 .loading-text {
-    font-size: 1.2rem;
+    font-size: 4rem;
     font-weight: 700;
     margin: 0;
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -105,19 +105,12 @@ body.loading .loading-screen {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    overflow-x: hidden;
-}
-
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 400;
-    color: #333;
     line-height: 1.6;
+    color: #000;
     background-color: #fff;
     overflow-x: hidden;
-    overflow-y: auto;
 }
 
 html {
@@ -127,20 +120,19 @@ html {
 /* 言語切り替えUI */
 .language-ui {
     position: fixed;
-    bottom: 100px;
-    left: 15px;
+    bottom: 20px;
+    left: 20px;
     z-index: 1000;
 }
 
 .language-trigger {
     cursor: pointer;
     color: #333;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     transition: color 0.3s ease;
     user-select: none;
-    padding: 0.4rem 0.8rem;
 }
 
 .language-trigger:hover {
@@ -149,7 +141,7 @@ html {
 
 .language-menu {
     position: absolute;
-    bottom: 40px;
+    bottom: 100%;
     left: 0;
     margin-bottom: 10px;
     background: #fff;
@@ -171,10 +163,10 @@ html {
 }
 
 .language-option {
-    padding: 0.3rem 0.6rem;
+    padding: 0.5rem 0.8rem;
     cursor: pointer;
     color: #333;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     transition: color 0.2s ease;
     border-radius: 4px;
 }
@@ -239,10 +231,10 @@ body {
 /* サイトラベル */
 .site-label {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
     z-index: 1001;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #333;
     letter-spacing: 0.05em;
@@ -257,46 +249,59 @@ body {
 /* ヘッダーとナビゲーション */
 header {
     position: fixed;
-    top: auto;
     bottom: 20px;
-    right: 20px;
-    left: auto;
+    left: 20px;
+    z-index: 1000;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
     width: auto;
     height: auto;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border: 1px solid #f0f0f0;
-    border-radius: 50%;
-    padding: 1rem;
-    z-index: 10000;
-    width: 60px;
-    height: 60px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .menu-toggle {
+    cursor: pointer;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+    user-select: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
-    position: relative;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu-toggle:hover {
+    color: #000;
 }
 
 .menu-toggle span {
     display: block;
-    width: 100%;
+    width: 16px;
     height: 2px;
     background-color: #333;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
+.menu-toggle span:nth-child(1) {
+    margin-bottom: 3px;
+}
+
+.menu-toggle span:nth-child(3) {
+    margin-top: 3px;
+}
+
 .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(3px, 3px);
+    margin-bottom: 0;
 }
 
 .menu-toggle.active span:nth-child(2) {
@@ -304,66 +309,31 @@ header {
 }
 
 .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(4px, -4px);
+    margin-top: 0;
 }
 
 .side-nav {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    width: auto;
-    min-width: 120px;
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    z-index: 9999;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 0.5rem;
-    box-sizing: border-box;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px) scale(0.9);
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    min-width: 150px;
 }
 
 .side-nav.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0) scale(1);
-}
-
-.side-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-    margin: 0;
-}
-
-.side-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    writing-mode: horizontal-tb;
-    text-orientation: mixed;
-    text-align: center;
-    line-height: 1.3;
-    padding: 0.8rem 1rem;
-    display: block;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.8);
-    white-space: nowrap;
-}
-
-.side-nav a:hover,
-.side-nav a.active {
-    color: #000;
-    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(0);
 }
 
 main {
@@ -373,23 +343,21 @@ main {
 
 /* トップページ（表紙） */
 .cover {
-    height: calc(var(--vh, 1vh) * 100);
-    min-height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: visible;
-    padding: 0;
+    overflow: hidden;
 }
 
 .cover::before {
     content: '';
     position: absolute;
-    left: 5%;
-    top: 10%;
+    left: 40px;
+    top: 60px;
     width: 1px;
-    height: 80%;
+    height: calc(100% - 120px);
     background-color: #000;
     z-index: 2;
 }
@@ -405,30 +373,29 @@ main {
 
 /* ヘッダーテキストブロック */
 .header-text-block {
-    position: absolute;
-    top: 5%;
-    left: 5%;
+    position: fixed;
+    top: 20px;
+    left: 20px;
     z-index: 1000;
     text-align: left;
-    max-width: 40%;
 }
 
 .header-line-1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #000;
     margin-bottom: 0.6em;
 }
 
 .header-line-2 {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 300;
     color: rgba(0, 0, 0, 0.45);
     margin-bottom: 0.6em;
 }
 
 .header-line-3 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #000;
 }
@@ -437,14 +404,13 @@ main {
 .subtitle-section {
     position: absolute;
     top: 30%;
-    left: 5%;
+    left: 4%;
     transform: translate(0, -50%);
     z-index: 2;
-    max-width: 40%;
 }
 
 .skill-subtitle {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     color: #666;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -454,28 +420,25 @@ main {
 /* 背景タイポグラフィ */
 .background-text {
     position: absolute;
-    font-size: 4rem;
+    font-size: 10rem;
     font-weight: 650;
     color: #000;
     letter-spacing: -0.05em;
     z-index: 1;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    top: 50%;
-    left: 50%;
+    top: 15%;
+    left: 25%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     pointer-events: none;
     line-height: 0.8;
-    text-align: center;
-    width: 90%;
 }
 
 /* スクロール誘導 */
 .scroll-indicator {
     position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 5px;
+    left: 290px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -484,36 +447,34 @@ main {
 }
 
 .scroll-text {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #333;
     letter-spacing: 0.1em;
 }
 
 .scroll-arrow {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #333;
     animation: bounce 2s infinite;
 }
-
 .skill-line{
     position: absolute;
-    top: 70%;
-    left: 5%;
+    top: 38%;
+    left: 4%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 40%;
 }
 
 .skill-line-text{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 650;
     color: #000;
 }
 
 .skill-subtitle {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     color: #999;
     margin: 0.2rem 0;
     font-weight: 300;
@@ -521,43 +482,101 @@ main {
 }
 
 .skill-description {
-    max-width: 100%;
+    max-width: 400px;
 }
 
 .skill-description p {
     margin: 0 0 0.2rem 0;
-    font-size: 0.7rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.6;
     color: #333;
 }
 
-/* メインビジュアル */
-.main-visual {
-    position: absolute;
-    z-index: 3;
-    width: 50%;
-    max-width: 300px;
-    height: auto;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
+.skill-description p:first-child {
+    margin-top: 0;
 }
 
-.main-visual img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+.skill-description p:last-child {
+    margin-bottom: 0;
 }
 
-/* スマホ用背景画像設定 */
-.main-visual {
-    background: url('../images/sumahoyou.png') center/contain no-repeat;
+.skill-content-toggle {
+    margin-top: 0.2rem;
 }
 
-.main-visual img {
+.toggle-button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    font-family: inherit;
+    transition: color 0.2s ease;
+}
+
+.toggle-button:hover,
+.toggle-button:focus {
+    color: #333;
+    outline: none;
+}
+
+.toggle-button:focus-visible {
+    outline: 2px solid #666;
+    outline-offset: 2px;
+}
+
+.skill-content {
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
+.skill-content.expanded {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.skill-content br {
+    display: block;
+    margin-bottom: 0.2rem;
+    line-height: 1.6;
+}
+
+.skill-content p {
+    margin: 0 0 0.2rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.skill-content p:first-child {
+    margin-top: 0.5rem;
+}
+
+.skill-section {
+    margin-bottom: 1.5rem;
+}
+
+.skill-section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin: 0 0 0.5rem 0;
+}
+
+.skill-section p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.skill-content p[data-lang="skill-desc-empty"] {
+    display: none;
+}
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -570,49 +589,54 @@ main {
     }
 }
 
+/* メインビジュアル */
+.main-visual {
+    position: absolute;
+    z-index: 3;
+    max-width: 60%;
+    max-height: 70vh;
+    top: 20%;
+    right: 20%;
+    transform: translateY(-50%);
+}
+
+.main-visual img {
+    width: 145%;
+    height: auto;
+    object-fit: contain;
+}
+
 /* セクションヘッダー */
 .section-header {
     position: fixed;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 200px;
     z-index: 100;
     width: auto;
-    text-align: center;
-    margin-bottom: 0;
-    background: none;
-    backdrop-filter: none;
-    padding: 0;
-    border-bottom: none;
-    white-space: nowrap;
+    text-align: left;
 }
 
 .section-title {
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #333;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    line-height: 1.2;
 }
 
 /* セクション共通 */
-section:not(.cover) {
-    padding: calc(var(--vh, 1vh) * 100) 1rem;
-    min-height: calc(var(--vh, 1vh) * 100);
+section {
+    padding: 8rem 4rem;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 100px;
-    overflow-x: hidden;
 }
 
 .content-wrapper {
     width: 100%;
-    max-width: 95vw;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
-    overflow-x: hidden;
 }
 
 /* ABOUTセクション */
@@ -1331,29 +1355,26 @@ footer {
         padding: 0;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 0.5rem;
         width: 100%;
-        margin-top: 4rem;
+        margin: 0;
     }
 
     .side-nav a {
         text-decoration: none;
         color: #333;
         font-weight: 600;
-        font-size: 1.2rem;
-        letter-spacing: 0.05em;
-        transition: color 0.3s ease;
-        writing-mode: horizontal-tb;
-        text-orientation: mixed;
-        text-align: left;
-        line-height: 1.3;
-        padding: 1rem 0;
-        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.8rem;
+        transition: color 0.2s ease;
+        border-radius: 4px;
+        padding: 0.5rem 0.8rem;
+        display: block;
     }
 
     .side-nav a:hover,
     .side-nav a.active {
         color: #000;
+        background-color: #f5f5f5;
     }
 
     .language-ui {
