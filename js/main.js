@@ -57,11 +57,25 @@ function initMobileMenu() {
         e.preventDefault();
         e.stopPropagation();
         console.log('Menu toggle clicked');
+        
+        // 現在の状態を確認
+        const isActive = sideNav.classList.contains('active');
+        console.log('Current state:', isActive);
+        
         menuToggle.classList.toggle('active');
         sideNav.classList.toggle('active');
-        console.log('Menu classes:', {
-            toggleActive: menuToggle.classList.contains('active'),
-            navActive: sideNav.classList.contains('active')
+        
+        // 新しい状態を確認
+        const newActiveState = sideNav.classList.contains('active');
+        console.log('New state:', newActiveState);
+        
+        // メニューの位置情報を確認
+        const rect = sideNav.getBoundingClientRect();
+        console.log('Menu position:', {
+            left: rect.left,
+            right: rect.right,
+            width: rect.width,
+            visible: rect.left >= 0
         });
     });
     
@@ -756,7 +770,7 @@ function initWorkCategories() {
             { title: 'metaherose様万博用キャラクター製作', year: '2024', image: 'images/work3.png' },
             { title: '香蘭ファッションデザイン専門学校様', year: '2023', image: 'images/work4.png' },
             { title: 'CGWORLD 2024年6月号 掲載', year: '2023', image: 'images/work25.png' },
-            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', year: '2024', image: 'images/work7.png' },
+            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', year: '2024', image: 'images/work41.png' },
             { title: 'CHASE', year: '2024', image: 'images/work28.png' },
             { title: 'U30 3DCG Vision Contest 2022', year: '2024', image: 'images/work9.png' },
             { title: 'ハードサーフィスキャラクター製作', year: '2023', image: 'images/work26.png' },
@@ -770,13 +784,13 @@ function initWorkCategories() {
         ],
         contest: [
             { title: 'CGWORLD 2024年6月号 掲載', year: '2023', image: 'images/work25.png', workId: 'work5' },
-            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', year: '2024', image: 'images/work7.png', workId: 'work7' },
+            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', year: '2024', image: 'images/work41.png', workId: 'work7' },
             { title: '大阪芸術大学ダヴィンチコンテスト 審査員賞', year: '2024', image: 'images/work14.png', workId: 'work14' }
         ],
         personal: [
             { title: 'ハードサーフィスキャラクター製作', year: '2023', image: 'images/work26.png', workId: 'work9' },
             { title: 'ハードサーフィスキャラクター製作2', year: '2024', image: 'images/work16.png', workId: 'work10' },
-            { title: 'CHASE', year: '2024', image: 'images/work28.png', workId: 'work7' },
+            { title: 'CHASE', year: '2024', image: 'images/work28.png', workId: 'work28' },
             { title: 'U30 3DCG Vision Contest 2022', year: '2024', image: 'images/work9.png', workId: 'work8' }
         ]
     };
