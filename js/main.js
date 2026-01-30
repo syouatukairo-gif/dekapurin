@@ -847,7 +847,7 @@ const worksData = {
     'work2': {
         title: '祇園銀座百鬼夜行<br>三菱銀行展示',
         year: '2024',
-        images: ['images/work1.png', 'images/work3.png', 'images/work4.png', 'images/work1.png'],
+        images: ['images/work1.png', 'images/work31.png', 'images/work32.png', 'images/work33.png'],
         description: `
             <h4>概要</h4>
             <p>卒業展示作品をもとに、三菱協力による個展向け新作映像を制作。</p>
@@ -861,7 +861,7 @@ const worksData = {
     'work3': {
         title: 'metaherose様万博用キャラクター製作',
         year: '2024',
-        images: ['images/work3.png', 'images/work4.png', 'images/work1.png', 'images/work2.png'],
+        images: ['images/work3.png', 'images/work35.png', 'images/work36.png', 'images/work34.png'],
         description: `
             <h4>概要</h4>
             <p>インターンとして参加していた企業が、大阪・関西万博に<br>2日間限定で出展するにあたり、
