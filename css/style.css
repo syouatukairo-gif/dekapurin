@@ -1386,6 +1386,7 @@ footer {
         width: 100%;
         height: auto;
         object-fit: contain;
+        content: url('../images/sumahoyou.png'); /* Mobile specific image */
     }
 
     .skill-line {
