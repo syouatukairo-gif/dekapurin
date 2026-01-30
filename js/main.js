@@ -41,60 +41,85 @@ function initLoadingAnimation() {
 
 // Mobile Menu Toggle
 function initMobileMenu() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const sideNav = document.querySelector('.side-nav');
-    const navLinks = document.querySelectorAll('.side-nav a');
+    const menuTrigger = document.querySelector('.menu-trigger');
+    const menuNav = document.querySelector('.menu-nav');
+    const menuOptions = document.querySelectorAll('.menu-option');
     
-    console.log('Mobile menu init:', { menuToggle, sideNav, navLinks });
+    console.log('Mobile menu init:', { menuTrigger, menuNav, menuOptions });
     
-    if (!menuToggle || !sideNav) {
-        console.error('Mobile menu elements not found:', { menuToggle, sideNav });
+    if (!menuTrigger || !menuNav) {
+        console.error('Mobile menu elements not found:', { menuTrigger, menuNav });
         return;
     }
     
     // Toggle menu
-    menuToggle.addEventListener('click', (e) => {
+    menuTrigger.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Mobile menu toggle clicked');
+        console.log('Mobile menu trigger clicked');
         
-        // 
-        const isActive = sideNav.classList.contains('active');
+        // 現在の状態を確認
+        const isActive = menuNav.classList.contains('active');
         console.log('Mobile menu current state:', isActive);
         
-        // 
+        // クラスをトグル
         if (isActive) {
-            sideNav.classList.remove('active');
-            menuToggle.classList.remove('active');
+            menuNav.classList.remove('active');
+            menuTrigger.classList.remove('active');
         } else {
-            sideNav.classList.add('active');
-            menuToggle.classList.add('active');
+            menuNav.classList.add('active');
+            menuTrigger.classList.add('active');
         }
         
-        // 
-        const newActiveState = sideNav.classList.contains('active');
+        // 新しい状態を確認
+        const newActiveState = menuNav.classList.contains('active');
         console.log('Mobile menu new state:', newActiveState);
         
-        // 
-        const computedStyle = window.getComputedStyle(sideNav);
+        // メニューの表示状態を確認
+        const computedStyle = window.getComputedStyle(menuNav);
         console.log('Mobile menu display style:', computedStyle.display);
     });
     
-    // Close menu when clicking on a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            console.log('Mobile menu link clicked, closing menu');
-            sideNav.classList.remove('active');
-            menuToggle.classList.remove('active');
+    // Close menu when clicking on a menu option
+    menuOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            console.log('Mobile menu option clicked, closing menu');
+            
+            // Get the target section from data-lang attribute
+            const targetId = option.getAttribute('data-lang');
+            let targetSection = null;
+            
+            // Map data-lang to section IDs
+            const sectionMap = {
+                'nav-home': 'cover',
+                'nav-ip': 'ip',
+                'nav-works': 'works',
+                'nav-about': 'about',
+                'nav-skills': 'skills'
+            };
+            
+            const sectionId = sectionMap[targetId];
+            if (sectionId) {
+                targetSection = document.getElementById(sectionId);
+            }
+            
+            // Close menu
+            menuNav.classList.remove('active');
+            menuTrigger.classList.remove('active');
+            
+            // Scroll to target section
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     });
     
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!menuToggle.contains(e.target) && !sideNav.contains(e.target)) {
+        if (!menuTrigger.contains(e.target) && !menuNav.contains(e.target)) {
             console.log('Clicked outside mobile menu, closing menu');
-            sideNav.classList.remove('active');
-            menuToggle.classList.remove('active');
+            menuNav.classList.remove('active');
+            menuTrigger.classList.remove('active');
         }
     });
 }
@@ -1035,7 +1060,7 @@ const worksData = {
     'work10': {
         title: 'ハードサーフィスキャラクター2',
         year: '2024',
-        images: ['images/work16.png', 'images/work1.png', 'images/work2.png', 'images/work3.png'],
+        images: ['images/work16.png', 'images/25.png', 'images/work2.png', 'images/work3.png'],
         description: `
             <h4>概要</h4>
             <p>スキルアップのために制作した練習用モデル。テーマは「有機と無機の融合」。</p>
