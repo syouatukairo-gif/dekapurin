@@ -1374,7 +1374,7 @@ footer {
     .main-visual {
         position: relative;
         z-index: 3;
-        width: 100vw;
+        width: 120vw;
         height: 50vh;
         top: auto;
         right: auto;
