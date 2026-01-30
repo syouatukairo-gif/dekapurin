@@ -41,18 +41,23 @@ function initLoadingAnimation() {
 
 // Mobile Menu Toggle
 function initMobileMenu() {
-    // 左下のメニュー
-    const menuTrigger = document.querySelector('.menu-ui:not(.menu-ui-right) .menu-trigger');
-    const menuNav = document.querySelector('.menu-ui:not(.menu-ui-right) .menu-nav');
-    const menuOptions = document.querySelectorAll('.menu-ui:not(.menu-ui-right) .menu-option');
+    // PC用ナビゲーション
+    const pcNavLinks = document.querySelectorAll('header .side-nav a');
     
-    console.log('Mobile menu init:', { menuTrigger, menuNav, menuOptions });
+    // PC用ナビゲーションのクリックイベント
+    pcNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
     
-    if (menuTrigger && menuNav) {
-        setupMenu(menuTrigger, menuNav, menuOptions, 'left');
-    }
-    
-    // 右下のメニュー
+    // スマホ用ハンバーガーメニュー（右下のみ）
     const menuTriggerRight = document.querySelector('.menu-ui-right .menu-trigger');
     const menuNavRight = document.querySelector('.menu-ui-right .menu-nav');
     const menuOptionsRight = document.querySelectorAll('.menu-ui-right .menu-option');
@@ -850,6 +855,13 @@ function initWorkCategories() {
     const categoryTabs = document.querySelectorAll('.category-tab');
     const workItems = document.querySelectorAll('.work-item');
     
+    console.log('Work categories init:', { categoryTabs, workItems });
+    
+    if (categoryTabs.length === 0) {
+        console.error('Category tabs not found');
+        return;
+    }
+    
     // Work data for each category (9 items each)
     const worksGridData = {
         all: [
@@ -884,8 +896,14 @@ function initWorkCategories() {
     };
     
     function updateWorksGrid(category) {
+        console.log('Updating works grid for category:', category);
         const works = worksGridData[category] || worksGridData.all;
         const worksGrid = document.getElementById('worksGrid');
+        
+        if (!worksGrid) {
+            console.error('Works grid not found');
+            return;
+        }
         
         // Clear existing items
         worksGrid.innerHTML = '';
@@ -911,12 +929,20 @@ function initWorkCategories() {
             
             worksGrid.appendChild(workItem);
         });
+        
+        console.log(`Added ${works.length} work items to grid`);
     }
     
     // Category switching
-    categoryTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+    categoryTabs.forEach((tab, index) => {
+        console.log(`Setting up category tab ${index}:`, tab.textContent, tab.getAttribute('data-category'));
+        
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
             const targetCategory = this.getAttribute('data-category');
+            console.log('Category tab clicked:', targetCategory);
             
             // Update active tab
             categoryTabs.forEach(t => t.classList.remove('active'));

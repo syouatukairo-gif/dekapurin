@@ -247,10 +247,59 @@ body {
 }
 
 /* ヘッダーとナビゲーション */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.side-nav {
+    width: auto;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.side-nav a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 650;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+}
+
+.side-nav a:hover,
+.side-nav a.active {
+}
+
+/* スマホ用ハンバーガーメニュー */
 .menu-ui {
+    display: none;
+}
+
+.menu-ui-right {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
+    left: auto;
     z-index: 1000;
     background: none;
     backdrop-filter: none;
@@ -316,7 +365,8 @@ body {
 .menu-nav {
     position: absolute;
     bottom: 100%;
-    left: 0;
+    right: 0;
+    left: auto;
     margin-bottom: 10px;
     background: #fff;
     border: 1px solid #ddd;
@@ -350,62 +400,38 @@ body {
     background-color: #f5f5f5;
 }
 
-/* 右下用ハンバーガーメニュー */
-.menu-ui-right {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    left: auto;
-    z-index: 1000;
-    background: none;
-    backdrop-filter: none;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.menu-ui-right .menu-nav {
-    position: absolute;
-    bottom: 100%;
-    right: 0;
-    left: auto;
-    margin-bottom: 10px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    min-width: 150px;
-}
-
-.menu-ui-right .menu-nav.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+/* モバイル用スタイル */
+@media (max-width: 768px) {
+    /* PC用ヘッダーを非表示 */
+    header {
+        display: none;
+    }
+    
+    /* スマホ用ハンバーガーメニューを表示 */
+    .menu-ui {
+        display: flex;
+    }
+    
+    .menu-ui-right {
+        display: flex;
+    }
 }
 
 main {
     margin-left: 0;
-    min-height: 100vh;
+    min-height: auto;
 }
 
 /* トップページ（表紙） */
 .cover {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding: 8rem 4rem;
 }
 
 .cover::before {
@@ -683,11 +709,19 @@ main {
 
 /* セクション共通 */
 section {
-    padding: 8rem 4rem;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 8rem 4rem !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    height: auto !important;
+}
+
+/* coverセクションのみ全画面表示 */
+section.cover {
+    min-height: 100vh !important;
+    align-items: center !important;
 }
 
 .content-wrapper {
@@ -1462,8 +1496,8 @@ footer {
     }
 
     .cover {
-        height: 100vh;
-        min-height: 100vh;
+        height: 100vh !important;
+        min-height: 100vh !important;
         position: relative;
         display: flex;
         align-items: center;
@@ -1472,14 +1506,7 @@ footer {
     }
 
     .cover::before {
-        content: '';
-        position: absolute;
-        left: 40px;
-        top: 60px;
-        width: 1px;
-        height: calc(100% - 120px);
-        background-color: #000;
-        z-index: 2;
+        display: none;
     }
 
     .cover-content {
@@ -1614,12 +1641,13 @@ footer {
     }
 
     section {
-        padding: 100vh 2rem;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 100px;
+        padding: 4rem 2rem !important;
+        min-height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        height: auto !important;
     }
 
     .section-header {
@@ -2092,6 +2120,7 @@ footer {
         width: 100%;
         height: auto;
         object-fit: contain;
+        content: url('../images/robot_dog_5.png'); /* PC specific image */
     }
     
     /* スマホ専用の背景画像設定 */
@@ -2118,22 +2147,6 @@ footer {
     }
     
     .scroll-indicator {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    section {
-        padding: 100vh 1rem;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 100px;
-        overflow-x: hidden;
-    }
-    
-    .section-header {
-        position: fixed;
         top: 20px;
         left: 50%;
         transform: translateX(-50%);
@@ -2489,7 +2502,7 @@ footer {
 @media (max-height: 500px) and (orientation: landscape) {
     .cover {
         min-height: auto;
-        height: 100vh;
+        height: auto;
     }
     
     .background-text {
@@ -2506,7 +2519,7 @@ footer {
     }
     
     section {
-        padding: 2rem 1.5rem;
+        padding: 4rem 1.5rem;
         padding-bottom: 80px;
     }
 }
