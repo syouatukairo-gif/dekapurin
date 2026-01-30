@@ -402,6 +402,17 @@ header {
     }
 }
 
+/* モバイルではPC用side-navを非表示 */
+@media (max-width: 768px) {
+    .side-nav {
+        display: none;
+    }
+    
+    .side-nav.active {
+        display: block;
+    }
+}
+
 main {
     margin-left: 0;
     min-height: 100vh;
