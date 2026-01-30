@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>dekapurin - 3DCG Creator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <h1 class="loading-text">dekapurin</h1>
+        </div>
+    </div>
+
+    <div class="site-label" data-lang="site-label">dekapurin's portfolio</div>
+    <div class="language-ui">
+        <div class="language-trigger" data-lang="language">Language</div>
+        <div class="language-menu">
+            <div class="language-option" data-lang="en">English</div>
+            <div class="language-option" data-lang="zh">中文（Chinese）</div>
+            <div class="language-option" data-lang="ko">한국어（Korean）</div>
+            <div class="language-option" data-lang="ja">日本語（Japanese）</div>
+        </div>
+    </div>
+    <header>
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#cover" data-lang="nav-home">Home / ホーム</a></li>
+                <li><a href="#ip" data-lang="nav-ip">IP / IPコンテンツ</a></li>
+                <li><a href="#works" data-lang="nav-works">Works / 実績一覧</a></li>
+                <li><a href="#about" data-lang="nav-about">About / 自己紹介</a></li>
+                <li><a href="#skills" data-lang="nav-skills">Skills / スキル</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cover" class="cover">
+            <div class="cover-content">
+                <div class="background-text">dekapurin</div>
+                <div class="subtitle-section">
+                    <div class="skill-subtitle" data-lang="skill-subtitle">SF Visuals for Film,</div>
+                </div>
+                <div class="main-visual">
+                    <img src="images/robot_dog_5.png" alt="3DCG Character" />
+                </div>
+                <div class="scroll-indicator">
+                    <span class="scroll-text" data-lang="scroll">SCROLL</span>
+                    <span class="scroll-arrow">↓</span>
+                </div>
+                <div class="skill-line">
+                    <span class="skill-line-text" data-lang="work-ip">Work & Original IP</span>
+                    <div class="skill-description">
+                        <p data-lang="skill-desc-1">本サイトでは、ロボット／SF世界観を軸とした『受注制作』と『オリジナルIP制作』の両方を扱っています。</p>
+                        <div class="skill-content-toggle">
+                            <button class="toggle-button" aria-expanded="false" aria-controls="skill-content">
+                                <span class="toggle-text">続きを見る</span>
+                            </button>
+                            <div id="skill-content" class="skill-content" aria-hidden="true">
+                                <div class="skill-section">
+                                    <h4 data-lang="skill-heading-1">受注制作（Client Work）</h4>
+                                    <p data-lang="skill-desc-2">企業・イベント向けに、ロボット／SF世界観を用途や制約に合わせて再設計し、映像や展示として実装しています。ブランディングや演出意図、会場条件を踏まえた上で最適な形に落とし込みます。</p>
+                                </div>
+                                <div class="skill-section">
+                                    <h4 data-lang="skill-heading-2">オリジナルIP制作（Original IP）</h4>
+                                    <p data-lang="skill-desc-3">自身の世界観を用いたオリジナル映像作品を制作しています。完成済みの作品を起点に、続編や拡張要素を予約販売する形式で展開し、作品世界そのものを継続的に発展させていきます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ip" class="ip">
+            <div class="section-header">
+                <span class="section-title">IP / IPコンテンツ</span>
+            </div>
+            <div class="content-wrapper">
+                <div class="ip-content">
+                    <div class="ip-banner-container">
+                        <div class="ip-banner">
+                            <div class="ip-image-nav-area ip-nav-left"></div>
+                            <img id="ipBannerImage" src="images/work30.png" alt="IP Content">
+                            <div class="ip-image-nav-area ip-nav-right"></div>
+                        </div>
+                        <div class="ip-info-panel">
+                            <h3 id="ipTitle">IDOL</h3>
+                            <p id="ipCategory">フル3DCGのアニメーション作品</p>
+                            <p id="ipDescription">現在制作中のオリジナルSF映像企画<br>短編映像として完成させ、公開・評価を起点に<br>続編や拡張企画を予約販売形式で展開予定</p>
+                            <div class="ip-indicators">
+                                <span class="ip-dot active"></span>
+                                <span class="ip-dot"></span>
+                                <span class="ip-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <div class="section-header">
+                <span class="section-title">Works / 実績一覧</span>
+            </div>
+            <div class="content-wrapper">
+                <div class="works-content">
+                    <div class="works-categories">
+                        <button class="category-tab active" data-category="all">すべて</button>
+                        <button class="category-tab" data-category="work">仕事</button>
+                        <button class="category-tab" data-category="contest">コンテスト</button>
+                        <button class="category-tab" data-category="personal">自主制作</button>
+                    </div>
+                    <div class="works-grid" id="worksGrid">
+                        <!-- Grid items - content will be updated dynamically -->
+                        <div class="work-item">
+                            <img src="" alt="" />
+                            <div class="work-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="" alt="" />
+                            <div class="work-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="" alt="" />
+                            <div class="work-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="" alt="" />
+                            <div class="work-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="" alt="" />
+                            <div class="work-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="" alt="" />
+                            <div class="work-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="" alt="" />
+                            <div class="work-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="" alt="" />
+                            <div class="work-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="work-item">
+                            <img src="" alt="" />
+                            <div class="work-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <section id="about" class="about">
+            <div class="section-header">
+                <span class="section-title">About / 自己紹介</span>
+            </div>
+            <div class="content-wrapper">
+                <div class="about-content">
+                    <div class="about-left">
+                        <div class="about-icon">
+                            <img src="images/robot_dog_12.png" alt="Profile Icon" />
+                        </div>
+                        <div class="about-info">
+                            <h2 class="about-name-en">dekapurin</h2>
+                            <h3 class="about-name-ja">デカプリン</h3>
+                            <div class="about-sns">
+                                <a href="https://x.com/bibiri_1112" target="_blank" class="sns-icon">
+                                    <img src="images/x.png" alt="X" />
+                                </a>
+                                <a href="https://github.com/osusi109" target="_blank" class="sns-icon">
+                                    <img src="images/github.png" alt="GitHub" />
+                                </a>
+                                <a href="https://www.instagram.com/ichiki109/" target="_blank" class="sns-icon">
+                                    <img src="images/insta.png" alt="Instagram" />
+                                </a>
+                                <a href="mailto:contact@dekapurin.com" class="sns-icon">
+                                    <img src="images/mail.png" alt="Email" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <div class="about-text">
+                            <h3 data-lang="about-title">自己紹介</h3>
+                            <p data-lang="about-desc">映像制作全般をしていてメインは3Dキャラクター製作</p>
+                        </div>
+                        <div class="about-history">
+                            <h3 data-lang="history-title">経歴</h3>
+                            <div class="history-item">
+                                <span class="year" data-lang="year-2021">2021年（令和3年）</span>
+                                <span class="detail" data-lang="detail-2021">4月 奈良工業高等専門学校 電子制御工学科 入学</span>
+                            </div>
+                            <div class="history-item">
+                                <span class="year" data-lang="year-2024-1">2024年（令和6年）</span>
+                                <span class="detail" data-lang="detail-2024-1">3月 退学</span>
+                            </div>
+                            <div class="history-item">
+                                <span class="year" data-lang="year-2024-2">2024年（令和6年）</span>
+                                <span class="detail" data-lang="detail-2024-2">4月 大阪芸術大学 アートサイエンス学科 入学</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="section-header">
+                <span class="section-title">Skills / スキル</span>
+            </div>
+            <div class="content-wrapper">
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <h4 data-lang="skill-blender">Blender</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4 data-lang="skill-modeling">キャラクターモデリング</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4 data-lang="skill-sculpt">スカルプト</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4 data-lang="skill-hardsurface">ハードサーフェス</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4 data-lang="skill-texturing">テクスチャリング</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4 data-lang="skill-lighting">ライティング</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Work Detail Modal -->
+    <div id="workModal" class="work-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <div class="image-nav-area image-nav-left"></div>
+                    <img id="modalImage" src="" alt="" class="modal-image">
+                    <div class="image-nav-area image-nav-right"></div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalYear"></p>
+                    <div id="modalDescription"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p data-lang="footer">&copy; 2024 dekapurin. All rights reserved.</p>
+    </footer>
+</body>
+</html>
