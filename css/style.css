@@ -1321,7 +1321,14 @@ footer {
     }
 
     .cover::before {
-        display: none; /* Remove vertical line on mobile */
+        content: '';
+        position: absolute;
+        left: 40px;
+        top: 60px;
+        width: 1px;
+        height: calc(100% - 120px);
+        background-color: #000;
+        z-index: 2;
     }
 
     .cover-content {
@@ -1329,103 +1336,87 @@ footer {
         width: 100%;
         height: 100%;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 2rem 1rem;
-        text-align: center;
     }
 
     .background-text {
-        font-size: 3rem;
-        font-weight: 300;
+        position: absolute;
+        font-size: 6rem;
+        font-weight: 650;
         color: #000;
-        letter-spacing: -0.02em;
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        white-space: normal;
-        line-height: 1.1;
-        margin-bottom: 1rem;
-        text-align: center;
+        letter-spacing: -0.05em;
+        z-index: 1;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        top: 15%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        pointer-events: none;
+        line-height: 0.8;
     }
 
     .subtitle-section {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
+        position: absolute;
+        top: 30%;
+        left: 4%;
+        transform: translate(0, -50%);
         z-index: 2;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 2rem;
     }
 
     .skill-subtitle {
-        font-size: 1rem;
+        font-size: 0.7rem;
         color: #666;
-        font-weight: 400;
-        letter-spacing: 0.1em;
-        text-align: center;
-        line-height: 1.4;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-align: left;
     }
 
     .main-visual {
-        position: relative;
+        position: absolute;
         z-index: 3;
-        width: 120vw;
-        height: 50vh;
-        top: auto;
-        right: auto;
-        transform: none;
-        margin: 0 auto 2rem;
-        left: 50%;
-        margin-left: -50vw;
+        max-width: 60%;
+        max-height: 70vh;
+        top: 20%;
+        right: 20%;
+        transform: translateY(-50%);
     }
 
     .main-visual img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 145%;
+        height: auto;
+        object-fit: contain;
         content: url('../images/sumahoyou.png'); /* Mobile specific image */
     }
 
     .skill-line {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
+        position: absolute;
+        top: 38%;
+        left: 4%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        width: 100%;
-        max-width: 400px;
-        text-align: center;
-        margin: 0 auto;
+        gap: 1rem;
     }
 
     .skill-line-text {
-        font-size: 1.2rem;
-        font-weight: 600;
+        font-size: 1.6rem;
+        font-weight: 650;
         color: #000;
-        margin-bottom: 0.5rem;
     }
 
     .skill-description {
-        max-width: 100%;
-        text-align: center;
+        max-width: 400px;
     }
 
     .skill-description p {
+        margin: 0 0 0.2rem 0;
         font-size: 0.9rem;
         line-height: 1.6;
         color: #333;
     }
 
     .skill-content-toggle {
-        margin-top: 1rem;
+        margin-top: 0.2rem;
     }
 
     .toggle-button {
@@ -1434,69 +1425,69 @@ footer {
         color: #666;
         font-size: 0.9rem;
         cursor: pointer;
-        padding: 0.5rem 1rem;
+        padding: 0;
         text-decoration: underline;
         font-family: inherit;
         transition: color 0.2s ease;
-        border-radius: 4px;
     }
 
     .toggle-button:hover,
     .toggle-button:focus {
-        color: #000;
-        background-color: rgba(0, 0, 0, 0.05);
+        color: #333;
+        outline: none;
     }
 
     .scroll-indicator {
         position: absolute;
-        bottom: 100px;
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: 5px;
+        left: 290px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        gap: 10px;
         z-index: 5;
     }
 
     .scroll-text {
-        font-size: 0.75rem;
-        font-weight: 500;
-        color: #666;
-        letter-spacing: 0.15em;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #333;
+        letter-spacing: 0.1em;
     }
 
     .scroll-arrow {
-        font-size: 1.2rem;
-        color: #666;
+        font-size: 1.5rem;
+        color: #333;
         animation: bounce 2s infinite;
     }
 
     section {
-        padding: 0 1.5rem 4rem;
-        min-height: auto;
+        padding: 8rem 4rem;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding-bottom: 100px;
     }
 
     .section-header {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
+        position: fixed;
+        top: 20px;
+        left: 200px;
         z-index: 100;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 2rem;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 1.5rem 1.5rem;
-        border-bottom: 1px solid #f0f0f0;
+        width: auto;
+        text-align: left;
+        margin-bottom: 0;
+        background: none;
+        backdrop-filter: none;
+        padding: 0;
+        border-bottom: none;
     }
 
     .section-title {
-        font-size: 1.8rem;
-        font-weight: 300;
-        color: #000;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         line-height: 1.2;
@@ -1504,311 +1495,374 @@ footer {
 
     .content-wrapper {
         width: 100%;
-        max-width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 2rem 0;
+        padding: 0;
     }
 
     .about-content {
-        flex-direction: column;
-        gap: 3rem;
-        align-items: center;
-        text-align: center;
+        display: flex;
+        gap: 4rem;
+        align-items: flex-start;
     }
 
     .about-left {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
-    .about-icon {
-        width: 100px;
-        height: 100px;
+    .about-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .about-name-en {
         font-size: 1.8rem;
-        font-weight: 300;
-        text-align: center;
+        font-weight: 700;
         color: #000;
         margin: 0;
     }
 
     .about-name-ja {
-        font-size: 1.1rem;
-        font-weight: 400;
-        text-align: center;
-        color: #666;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #333;
         margin: 0;
     }
 
     .about-sns {
-        justify-content: center;
+        display: flex;
         gap: 1rem;
         margin-top: 1rem;
     }
 
     .sns-icon {
-        width: 36px;
-        height: 36px;
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #666;
         transition: color 0.3s ease;
         text-decoration: none;
-        border-radius: 50%;
-        background: #f8f8f8;
+        background: none;
+        border-radius: 0;
     }
 
     .sns-icon:hover {
         color: #000;
-        background: #f0f0f0;
+        background: none;
     }
 
     .sns-icon img {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         object-fit: contain;
     }
 
     .about-right {
-        width: 100%;
-        max-width: 500px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
 
     .about-text h3,
     .about-history h3 {
-        font-size: 1.4rem;
-        font-weight: 300;
-        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
         color: #000;
-        margin-bottom: 1.5rem;
     }
 
     .about-text p {
-        font-size: 1rem;
-        line-height: 1.7;
-        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.8;
         color: #333;
     }
 
     .history-item {
-        flex-direction: column;
-        gap: 0.5rem;
+        display: flex;
+        gap: 2rem;
         margin-bottom: 1.5rem;
-        text-align: center;
-        padding: 1rem;
-        background: #f8f8f8;
-        border-radius: 8px;
+        align-items: flex-start;
     }
 
     .year {
-        min-width: auto;
-        font-weight: 500;
+        font-weight: 600;
         color: #000;
-        font-size: 0.9rem;
+        min-width: 180px;
+        flex-shrink: 0;
     }
 
     .detail {
         color: #333;
         line-height: 1.6;
-        font-size: 0.9rem;
     }
 
     .works-categories {
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        margin-bottom: 2rem;
+        display: flex;
         justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
 
     .category-tab {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.85rem;
-        font-weight: 400;
-        border: 1px solid #e0e0e0;
+        padding: 0.8rem 2rem;
+        border: 2px solid #000;
         background: #fff;
-        color: #666;
+        color: #000;
+        font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
-        border-radius: 20px;
+        border-radius: 8px;
+        font-size: 1rem;
     }
 
     .category-tab:hover {
-        background: #f8f8f8;
-        border-color: #ccc;
+        background: #f5f5f5;
     }
 
     .category-tab.active {
         background: #000;
         color: #fff;
-        border-color: #000;
     }
 
     .works-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        max-width: 500px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
     .work-item {
-        background: #fff;
-        border: 1px solid #f0f0f0;
-        border-radius: 12px;
+        position: relative;
         overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
     }
 
     .work-item:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
     }
 
     .work-item img {
         width: 100%;
-        height: 140px;
+        height: 200px;
         object-fit: cover;
         display: block;
     }
 
     .work-info {
+        position: static;
+        background: transparent;
         padding: 1rem;
+        transform: none;
+        transition: none;
         text-align: center;
     }
 
+    .work-item:hover .work-info {
+        transform: none;
+    }
+
     .work-info h3 {
-        font-size: 0.9rem;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 600;
         margin-bottom: 0.3rem;
         color: #000;
     }
 
     .work-info p {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         color: #666;
     }
 
     .skills-list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        max-width: 400px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        max-width: 800px;
         margin: 0 auto;
     }
 
     .skill-item {
         text-align: center;
-        padding: 2rem 1rem;
+        padding: 2rem;
         background: #fff;
-        border: 1px solid #f0f0f0;
-        border-radius: 12px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #e0e0e0;
+        transition: transform 0.3s ease;
     }
 
     .skill-item:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
     }
 
     .skill-item h4 {
-        font-size: 0.9rem;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 600;
         color: #000;
         letter-spacing: 0.05em;
     }
 
     .ip-content {
-        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
     }
 
     .ip-header {
         text-align: center;
-        max-width: 600px;
+        max-width: 800px;
         margin: 0 auto;
     }
 
     .ip-header h2 {
-        font-size: 1.8rem;
-        font-weight: 300;
+        font-size: 2.5rem;
+        font-weight: 700;
         margin-bottom: 1rem;
         color: #000;
     }
 
     .ip-header p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #666;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #333;
     }
 
     .ip-banner-container {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        max-width: 1400px;
+        margin: 0 auto;
+        justify-content: flex-start;
+        padding-left: 0;
     }
 
     .ip-banner {
-        order: 2; /* 画像を下に */
+        position: relative;
+        flex: 3;
+        height: 700px;
+        background: transparent;
+        border-radius: 0;
+        overflow: visible;
+    }
+
+    .ip-status-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #000;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        z-index: 10;
+        backdrop-filter: blur(5px);
+    }
+
+    .ip-banner img {
         width: 100%;
-        max-width: 500px;
-        height: 300px;
-        background: #f8f8f8;
-        border-radius: 12px;
-        overflow: hidden;
+        height: 100%;
+        object-fit: contain;
+        transition: opacity 0.3s ease;
+    }
+
+    .ip-image-nav-area {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 15%;
+        cursor: pointer;
+        z-index: 5;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .ip-image-nav-area:hover {
+        opacity: 1;
+    }
+
+    .ip-nav-left {
+        left: 0;
+        background: linear-gradient(to right, rgba(0,0,0,0.3), transparent);
+    }
+
+    .ip-nav-right {
+        right: 0;
+        background: linear-gradient(to left, rgba(0,0,0,0.3), transparent);
     }
 
     .ip-info-panel {
-        order: 1; /* テキストを上に */
-        width: 100%;
-        max-width: 500px;
-        text-align: center;
-        padding: 2rem 1.5rem;
-        background: #f8f8f8;
-        border-radius: 12px;
+        flex: 0.4;
+        padding: 1rem;
     }
 
     .ip-info-panel h3 {
-        font-size: 1.4rem;
-        font-weight: 400;
-        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
         color: #000;
     }
 
     .ip-info-panel p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        color: #666;
-        margin-bottom: 0.8rem;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        color: #333;
+        margin-bottom: 0.6rem;
     }
 
     .ip-info-panel #ipCategory {
-        font-weight: 500;
+        font-weight: 600;
         color: #666;
-        margin-bottom: 1rem;
-        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
     }
 
     .ip-status {
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 0.5rem;
         margin-bottom: 1.5rem;
     }
 
     .status-label {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         color: #666;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .status-value {
-        font-size: 0.8rem;
-        font-weight: 500;
+        font-size: 0.9rem;
+        font-weight: 600;
         padding: 0.3rem 0.8rem;
-        border-radius: 12px;
+        border-radius: 20px;
         text-transform: uppercase;
+    }
+
+    .status-value.development {
+        background: #e3f2fd;
+        color: #1976d2;
+    }
+
+    .status-value.planning {
+        background: #fff3e0;
+        color: #f57c00;
+    }
+
+    .status-value.concept {
+        background: #f3e5f5;
+        color: #7b1fa2;
     }
 
     .ip-indicators {
@@ -1819,8 +1873,8 @@ footer {
     }
 
     .ip-dot {
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background: #ccc;
         cursor: pointer;
@@ -1833,7 +1887,7 @@ footer {
     }
 
     .ip-image-nav-area {
-        width: 25%;
+        width: 15%;
     }
 
     .contact-links {
