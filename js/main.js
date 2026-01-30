@@ -26,7 +26,17 @@ function initLoadingAnimation() {
         // Remove loading screen completely
         loadingScreen.classList.remove('active');
         loadingScreen.classList.remove('phase-3');
+        loadingScreen.style.display = 'none';
     }, 2500);
+    
+    // Failsafe: Force remove loading screen after 5 seconds
+    setTimeout(() => {
+        if (loadingScreen.classList.contains('active')) {
+            loadingScreen.classList.remove('active', 'phase-1', 'phase-2', 'phase-3');
+            loadingScreen.style.display = 'none';
+            body.classList.remove('loading');
+        }
+    }, 5000);
 }
 
 // Mobile Menu Toggle
