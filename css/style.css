@@ -1143,16 +1143,146 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* レスポンシブ */
+/* タブレット向けスタイル (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 1rem 1.5rem;
+    }
+    
+    .side-nav ul {
+        gap: 1.5rem;
+    }
+    
+    .side-nav a {
+        font-size: 0.9rem;
+    }
+    
+    .cover::before {
+        left: 30px;
+        top: 50px;
+        height: calc(100% - 100px);
+    }
+    
+    .background-text {
+        font-size: 7rem;
+        top: 20%;
+        left: 30%;
+    }
+    
+    .main-visual {
+        max-width: 50%;
+        right: 15%;
+    }
+    
+    .main-visual img {
+        width: 120%;
+    }
+    
+    .subtitle-section {
+        left: 3%;
+    }
+    
+    .skill-line {
+        left: 3%;
+    }
+    
+    .scroll-indicator {
+        left: 200px;
+    }
+    
+    .about-content {
+        gap: 3rem;
+    }
+    
+    .about-icon {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .skills-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .ip-banner-container {
+        gap: 2rem;
+    }
+    
+    .ip-banner {
+        height: 500px;
+    }
+    
+    .section-header {
+        left: 150px;
+    }
+}
+
+/* スマホ向けスタイル (最大768px) */
 @media (max-width: 768px) {
+    body {
+        cursor: auto; /* スマホではカスタムカーソルを無効化 */
+    }
+    
     .cursor-dot,
     .cursor-trail {
         display: none;
     }
 
+    header {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.98);
+        border-top: 1px solid #e0e0e0;
+        border-bottom: none;
+        padding: 0.8rem 1rem;
+        z-index: 1000;
+    }
+
+    .side-nav {
+        width: 100%;
+    }
+
+    .side-nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0;
+        width: 100%;
+    }
+
+    .side-nav a {
+        text-decoration: none;
+        color: #666;
+        font-weight: 600;
+        font-size: 0.75rem;
+        letter-spacing: 0.02em;
+        transition: color 0.3s ease;
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .side-nav a:hover,
+    .side-nav a.active {
+        color: #000;
+    }
+
     .language-ui {
-        bottom: 15px;
+        bottom: 80px;
         left: 15px;
+        z-index: 1001;
     }
 
     .language-trigger {
@@ -1173,18 +1303,135 @@ footer {
         top: 10px;
         left: 10px;
         font-size: 0.7rem;
+        z-index: 1001;
+    }
+
+    .cover {
+        height: 100vh;
+        min-height: 600px;
     }
 
     .cover::before {
-        left: 20px;
+        left: 15px;
         top: 40px;
         height: calc(100% - 80px);
     }
 
+    .background-text {
+        font-size: 4rem;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+
+    .subtitle-section {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+        width: 90%;
+    }
+
+    .skill-subtitle {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .main-visual {
+        position: absolute;
+        z-index: 3;
+        max-width: 80%;
+        max-height: 40vh;
+        top: 55%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .main-visual img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .skill-line {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 90%;
+        text-align: center;
+    }
+
+    .skill-line-text {
+        font-size: 1.2rem;
+        font-weight: 650;
+        color: #000;
+    }
+
+    .skill-description {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .skill-description p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
     .scroll-indicator {
-        bottom: 5px;
-        left: 80px;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 8px;
+        z-index: 5;
+    }
+
+    .scroll-text {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #333;
+        letter-spacing: 0.1em;
+    }
+
+    .scroll-arrow {
+        font-size: 1rem;
+        color: #333;
+        animation: bounce 2s infinite;
+    }
+
+    section {
+        padding: 4rem 1.5rem;
+        min-height: auto;
+        padding-bottom: 100px; /* フッターとナビゲーションのスペースを確保 */
+    }
+
+    .section-header {
+        position: relative;
+        top: auto;
+        left: auto;
+        z-index: auto;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #333;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
     }
 
     .about-content {
@@ -1193,12 +1440,29 @@ footer {
         align-items: center;
     }
 
+    .about-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
     .about-icon {
         width: 80px;
         height: 80px;
     }
 
+    .about-name-en {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .about-name-ja {
+        font-size: 1rem;
+        text-align: center;
+    }
+
     .about-sns {
+        justify-content: center;
         gap: 0.8rem;
     }
 
@@ -1211,51 +1475,115 @@ footer {
         width: 100%;
     }
 
+    .about-text h3,
+    .about-history h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
     .history-item {
         flex-direction: column;
         gap: 0.5rem;
         margin-bottom: 1rem;
+        text-align: center;
     }
 
-    .skill-line {
-        flex-direction: column;
-        align-items: flex-start;
+    .year {
+        min-width: auto;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .detail {
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .works-categories {
+        flex-wrap: wrap;
         gap: 0.5rem;
+        margin-bottom: 1.5rem;
     }
 
-    .skill-description {
-        max-width: 300px;
-    }
-
-    .skill-description p {
+    .category-tab {
+        padding: 0.6rem 1.2rem;
         font-size: 0.8rem;
-    }
-
-    .short-text {
-        position: absolute;
-        bottom: 10%;
-        right: 10%;
-        z-index: 2;
-        text-align: right;
-        font-size: 0.9rem;
-        font-weight: 400;
-        color: #666;
-        line-height: 1.4;
-        margin-right: 2rem;
     }
 
     .works-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .work-item img {
-        height: 150px;
+        height: 120px;
+    }
+
+    .work-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .work-info p {
+        font-size: 0.7rem;
     }
 
     .skills-list {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .skill-item {
+        padding: 1.5rem;
+    }
+
+    .skill-item h4 {
+        font-size: 0.9rem;
+    }
+
+    .ip-content {
+        gap: 2rem;
+    }
+
+    .ip-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .ip-header p {
+        font-size: 1rem;
+    }
+
+    .ip-banner-container {
+        flex-direction: column;
         gap: 1.5rem;
+        align-items: center;
+    }
+
+    .ip-banner {
+        width: 100%;
+        height: 300px;
+    }
+
+    .ip-info-panel {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .ip-info-panel h3 {
+        font-size: 1.2rem;
+    }
+
+    .ip-info-panel p {
+        font-size: 0.8rem;
+    }
+
+    .ip-image-nav-area {
+        width: 20%;
     }
 
     .contact-links {
@@ -1264,9 +1592,136 @@ footer {
         align-items: center;
     }
 
-    footer {
-        margin-left: 0;
+    /* 追加のモバイル最適化 */
+@media (max-width: 768px) {
+    /* タッチ操作の改善 */
+    .category-tab,
+    .toggle-button,
+    .ip-dot,
+    .sns-icon {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    
+    .sns-icon img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* スクロールの改善 */
+    main {
+        scroll-padding-bottom: 80px; /* ボトムナビゲーションの分を確保 */
+    }
+    
+    /* 言語切り替えUIの改善 */
+    .language-ui {
+        bottom: 70px;
+    }
+    
+    /* ローディング画面の調整 */
+    .loading-text {
+        font-size: 2.5rem;
+    }
+    
+    /* 小さい画面でのフォント調整 */
+    @media (max-width: 480px) {
+        .background-text {
+            font-size: 3rem;
+        }
+        
+        .skill-line-text {
+            font-size: 1rem;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+        }
+        
+        .side-nav a {
+            font-size: 0.7rem;
+        }
+        
+        .category-tab {
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+        }
+        
+        .skill-item h4 {
+            font-size: 0.8rem;
+        }
+        
+        .modal-info h2 {
+            font-size: 1.2rem;
+        }
+        
+        .modal-description {
+            font-size: 0.85rem;
+        }
+    }
+    
+    /* 横向き対応 */
+    @media (max-height: 500px) and (orientation: landscape) {
+        .cover {
+            min-height: auto;
+            height: 100vh;
+        }
+        
+        .background-text {
+            font-size: 3rem;
+            top: 30%;
+        }
+        
+        .main-visual {
+            max-height: 35vh;
+        }
+        
+        .skill-line {
+            top: 75%;
+        }
+        
+        section {
+            padding: 2rem 1.5rem;
+            padding-bottom: 80px;
+        }
+    }
+}
+
+/* タブレット向け追加調整 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* タッチ操作の改善 */
+    .category-tab,
+    .toggle-button,
+    .ip-dot,
+    .sns-icon {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* スクロールの改善 */
+    main {
+        scroll-padding-bottom: 20px;
+    }
+    
+    /* 言語切り替えUIの調整 */
+    .language-ui {
+        bottom: 25px;
+        left: 25px;
+    }
+    
+    /* ローディング画面の調整 */
+    .loading-text {
+        font-size: 3.5rem;
+    }
+}
+
+footer {
+    margin-left: 0;
+    padding: 1rem;
+    font-size: 0.7rem;
 }
 
 /* Work Modal Styles */
@@ -1443,6 +1898,7 @@ footer {
         width: 95vw;
         height: 90vh;
         flex-direction: column;
+        border-radius: 8px;
     }
     
     .modal-body {
@@ -1451,19 +1907,84 @@ footer {
     
     .modal-image-container {
         flex: 1;
-        min-height: 50vh;
+        min-height: 40vh;
+        background: #000;
+    }
+    
+    .modal-image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
     }
     
     .modal-info {
         flex: 1;
-        padding: 30px 20px;
+        padding: 20px 15px;
+        overflow-y: auto;
     }
     
     .modal-info h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .modal-info p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .modal-description h4 {
+        font-size: 1rem;
+        margin: 1.5rem 0 0.8rem 0;
+    }
+    
+    .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
     }
     
     .image-nav-area {
-        width: 20%;
+        width: 25%;
+        opacity: 0.7;
+    }
+    
+    .image-nav-area:hover {
+        opacity: 1;
+    }
+}
+
+/* タブレット向けモーダル調整 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .modal-content {
+        width: 90vw;
+        height: 85vh;
+    }
+    
+    .modal-info {
+        padding: 40px 30px;
+    }
+    
+    .modal-info h2 {
+        font-size: 1.7rem;
+    }
+    
+    .modal-info p {
+        font-size: 1rem;
+    }
+    
+    .modal-description {
+        font-size: 0.95rem;
+    }
+    
+    .modal-description h4 {
+        font-size: 1.1rem;
     }
 }
