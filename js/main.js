@@ -55,6 +55,8 @@ function initMobileMenu() {
     // Toggle menu
     menuToggle.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
+        alert('Menu clicked!'); // テスト用アラート
         console.log('Menu toggle clicked');
         menuToggle.classList.toggle('active');
         sideNav.classList.toggle('active');
