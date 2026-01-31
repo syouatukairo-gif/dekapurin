@@ -1565,7 +1565,6 @@ footer {
         width: 100%;
         height: auto;
         object-fit: contain;
-        content: url('../images/sumahoyou.png'); /* Mobile specific image */
     }
 
     .skill-line {
@@ -2121,7 +2120,6 @@ footer {
         width: 100%;
         height: auto;
         object-fit: contain;
-        content: url('../images/robot_dog_5.png'); /* PC specific image */
     }
     
     /* スマホ専用の背景画像設定 */
