@@ -865,33 +865,33 @@ function initWorkCategories() {
     // Work data for each category (9 items each)
     const worksGridData = {
         all: [
-            { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', year: '2024', image: 'images/work2.png' },
-            { title: '祇園銀座百鬼夜行<br>三菱銀行展示', year: '2024', image: 'images/work1.png' },
-            { title: 'metaherose様万博用キャラクター製作', year: '2024', image: 'images/work3.png' },
-            { title: '香蘭ファッションデザイン専門学校様', year: '2023', image: 'images/work4.png' },
-            { title: 'CGWORLD 2024年6月号 掲載', year: '2023', image: 'images/work25.png' },
-            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', year: '2024', image: 'images/work41.png' },
-            { title: 'CHASE', year: '2024', image: 'images/work28.png' },
-            { title: 'U30 3DCG Vision Contest 2022', year: '2024', image: 'images/work9.png' },
-            { title: 'オリジナルキャラクター制作', year: '2023', image: 'images/work58.png' },
-            { title: 'ハードサーフィスキャラクター製作1', year: '2024', image: 'images/work16.png' }
+            { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', description: '卒業展示作品のプロジェクションマッピング映像', year: '2024', image: 'images/work2.png' },
+            { title: '祇園銀座百鬼夜行<br>三菱銀行展示', description: '個展向け新作映像の制作と展示', year: '2024', image: 'images/work1.png' },
+            { title: 'metaherose様万博用キャラクター製作', description: '大阪・関西万博出展用キャラクター制作', year: '2024', image: 'images/work3.png' },
+            { title: '香蘭ファッションデザイン専門学校様', description: '公式Webページ用ファーストビュー映像', year: '2023', image: 'images/work4.png' },
+            { title: 'CGWORLD 2024年6月号 掲載', description: 'CGWORLD誌に作品が掲載されました', year: '2023', image: 'images/work25.png' },
+            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', description: '審査員賞を受賞したプロジェクションマッピング', year: '2024', image: 'images/work41.png' },
+            { title: 'CHASE', description: '都市探検をテーマにした自主制作映像', year: '2024', image: 'images/work28.png' },
+            { title: 'U30 3DCG Vision Contest 2022', description: 'コンテスト向けに制作したバイク映像', year: '2024', image: 'images/work9.png' },
+            { title: 'オリジナルキャラクター制作', description: '個人コンテンツ用キャラクターの研究制作', year: '2023', image: 'images/work58.png' },
+            { title: 'ハードサーフィスキャラクター製作1', description: '機能性を追求した四足歩行ロボット', year: '2024', image: 'images/work16.png' }
         ],
         work: [
-            { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', year: '2024', image: 'images/work2.png' },
-            { title: '祇園銀座百鬼夜行<br>三菱銀行展示', year: '2024', image: 'images/work1.png' },
-            { title: 'metaherose様万博用キャラクター製作', year: '2024', image: 'images/work3.png' },
-            { title: '香蘭ファッションデザイン専門学校様', year: '2023', image: 'images/work4.png' }
+            { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', description: '卒業展示作品のプロジェクションマッピング映像', year: '2024', image: 'images/work2.png' },
+            { title: '祇園銀座百鬼夜行<br>三菱銀行展示', description: '個展向け新作映像の制作と展示', year: '2024', image: 'images/work1.png' },
+            { title: 'metaherose様万博用キャラクター製作', description: '大阪・関西万博出展用キャラクター制作', year: '2024', image: 'images/work3.png' },
+            { title: '香蘭ファッションデザイン専門学校様', description: '公式Webページ用ファーストビュー映像', year: '2023', image: 'images/work4.png' }
         ],
         contest: [
-            { title: 'CGWORLD 2024年6月号 掲載', year: '2023', image: 'images/work25.png', workId: 'work5' },
-            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', year: '2024', image: 'images/work41.png', workId: 'work6' },
-            { title: '大阪芸術大学ダヴィンチコンテスト 審査員賞', year: '2024', image: 'images/work14.png', workId: 'work14' }
+            { title: 'CGWORLD 2024年6月号 掲載', description: 'CGWORLD誌に作品が掲載されました', year: '2023', image: 'images/work25.png', workId: 'work5' },
+            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', description: '審査員賞を受賞したプロジェクションマッピング', year: '2024', image: 'images/work41.png', workId: 'work6' },
+            { title: '大阪芸術大学ダヴィンチコンテスト 審査員賞', description: '手描きアニメーションで審査員賞を受賞', year: '2024', image: 'images/work14.png', workId: 'work14' }
         ],
         personal: [
-            { title: 'オリジナルキャラクター制作', year: '2023', image: 'images/work58.png', workId: 'work9' },
-            { title: 'ハードサーフィスキャラクター製作1', year: '2024', image: 'images/work16.png', workId: 'work10' },
-            { title: 'CHASE', year: '2024', image: 'images/work28.png', workId: 'work7' },
-            { title: 'U30 3DCG Vision Contest 2022', year: '2024', image: 'images/work9.png', workId: 'work8' }
+            { title: 'オリジナルキャラクター制作', description: '個人コンテンツ用キャラクターの研究制作', year: '2023', image: 'images/work58.png', workId: 'work9' },
+            { title: 'ハードサーフィスキャラクター製作1', description: '機能性を追求した四足歩行ロボット', year: '2024', image: 'images/work16.png', workId: 'work10' },
+            { title: 'CHASE', description: '都市探検をテーマにした自主制作映像', year: '2024', image: 'images/work28.png', workId: 'work7' },
+            { title: 'U30 3DCG Vision Contest 2022', description: 'コンテスト向けに制作したバイク映像', year: '2024', image: 'images/work9.png', workId: 'work8' }
         ]
     };
     
@@ -918,7 +918,7 @@ function initWorkCategories() {
                 <img src="${work.image}" alt="${work.title}" />
                 <div class="work-info">
                     <h3>${work.title}</h3>
-                    <p>${work.year}</p>
+                    <p>${work.description}</p>
                 </div>
             `;
             
@@ -956,6 +956,152 @@ function initWorkCategories() {
     // Initialize with all category
     updateWorksGrid('all');
 }
+
+// Skills data with workflow information
+const skillsData = {
+    'character': {
+        title: 'キャラクター制作',
+        subtitle: '用途と文脈から機能性を追求したキャラクターデザイン',
+        workflow: [
+            {
+                image: 'images/skill_character_1.png',
+                description: '使用環境と役割を明確化し、動作要件とデザインの方向性を同時に定義。機能性を優先した設計思想を基に、キャラクターの基本構造を決定します。'
+            },
+            {
+                image: 'images/skill_character_2.png',
+                description: '動作範囲と用途を考慮した骨格構造を設計。企業ロゴや象徴要素を自然に組み込みつつ、機能美として成立するシルエットを追求します。'
+            },
+            {
+                image: 'images/skill_character_3.png',
+                description: '実際の動作を想定したモデリングと、表現に必要な可動域を確保するリギングを同時進行。用途に応じたポリゴン数とテクスチャ仕様を決定します。'
+            },
+            {
+                image: 'images/skill_character_4.png',
+                description: '使用環境の光条件を考慮したマテリアル設定。実際のレンダリング環境での見え方を検証しながら、質感の最適化と表現の調整を行います。'
+            },
+            {
+                image: 'images/skill_character_5.png',
+                description: '映像や展示での実際の使用を想定した最終調整。用途に応じたフォーマット出力と、実運用でのパフォーマンスを確認し完成させます。'
+            }
+        ]
+    },
+    'video': {
+        title: '映像撮影・編集・制作',
+        subtitle: '目的と媒体特性から最適な映像表現を設計',
+        workflow: [
+            {
+                image: 'images/skill_video_1.png',
+                description: '伝えたい情報と使用環境から逆算し、映像の構成とテンポを設計。ファーストビューでの印象や展示空間での効果を考慮した方向性を決定します。'
+            },
+            {
+                image: 'images/skill_video_2.png',
+                description: '実写とCGの融合を前提に、撮影計画と3D制作を並行して準備。光の方向性やカメラワークを統一し、シームレスな表現を構築します。'
+            },
+            {
+                image: 'images/skill_video_3.png',
+                description: '設計した構成に基づき実撮影とCG制作を実施。音楽との同期を意識しながら、各シーンのインパクトと全体の流れを同時に追求します。'
+            },
+            {
+                image: 'images/skill_video_4.png',
+                description: '音ハメやリズムを重視した編集作業。全体のテンポと各シーンのつながりを調整し、視聴者の注意を引き続ける構成を最適化します。'
+            },
+            {
+                image: 'images/skill_video_5.png',
+                description: 'Webサイトや展示での実際の使用を想定した最終調整。使用環境に応じたフォーマットと画質設定で、最適な視聴体験を提供します。'
+            }
+        ]
+    },
+    'concept': {
+        title: 'コンセプト設計',
+        subtitle: '制約と目的から制作の方向性を構造化',
+        workflow: [
+            {
+                image: 'images/skill_concept_1.png',
+                description: 'プロジェクトの目的と制約条件を整理し、解決すべき課題を明確化。クライアントの意図とユーザーの期待値のギャップを分析します。'
+            },
+            {
+                image: 'images/skill_concept_2.png',
+                description: '課題解決に必要な要素を抽出し、制作の優先順位と構造を設計。技術的制約と表現のバランスを考慮した実現可能な方向性を決定します。'
+            },
+            {
+                image: 'images/skill_concept_3.png',
+                description: '設計した構造に基づき、各工程の具体的な実装方法を計画。制作チームのスキルと納期を考慮した、現実的な制作フローを構築します。'
+            },
+            {
+                image: 'images/skill_concept_4.png',
+                description: '制作過程での品質管理と進行調整。設計したコンセプトがブレないように、各工程での判断基準を明確にし、チーム全体で認識を統一します。'
+            },
+            {
+                image: 'images/skill_concept_5.png',
+                description: '完成した制作物の効果を検証し、設計段階での仮説と実際の結果を比較。次のプロジェクトに活かせる知見を抽出し、設計プロセスの改善を図ります。'
+            }
+        ]
+    }
+};
+
+// Skills Modal functionality
+function initSkillsModal() {
+    const skillsModal = document.getElementById('skillsModal');
+    const modalOverlay = skillsModal.querySelector('.modal-overlay');
+    const modalClose = skillsModal.querySelector('.modal-close');
+    const skillItems = document.querySelectorAll('.skill-item');
+    
+    // Open modal when skill item is clicked
+    skillItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const skillType = this.dataset.skill;
+            openSkillsModal(skillType);
+        });
+    });
+    
+    // Close modal when overlay is clicked
+    modalOverlay.addEventListener('click', closeSkillsModal);
+    
+    // Close modal when close button is clicked
+    modalClose.addEventListener('click', closeSkillsModal);
+    
+    // Close modal when Escape key is pressed
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && skillsModal.classList.contains('active')) {
+            closeSkillsModal();
+        }
+    });
+}
+
+// Global function for opening skills modal
+function openSkillsModal(skillType) {
+    const skill = skillsData[skillType];
+    if (!skill) return;
+    
+    // Set modal content
+    document.getElementById('skillModalTitle').textContent = skill.title;
+    document.getElementById('skillModalSubtitle').textContent = skill.subtitle;
+    
+    // Set workflow items
+    skill.workflow.forEach((item, index) => {
+        const imageElement = document.getElementById(`workflowImage${index + 1}`);
+        const descElement = document.getElementById(`workflowDesc${index + 1}`);
+        
+        imageElement.src = item.image;
+        imageElement.alt = skill.title + ' - ' + (index + 1);
+        descElement.textContent = item.description;
+    });
+    
+    // Show modal
+    document.getElementById('skillsModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Global function for closing skills modal
+function closeSkillsModal() {
+    document.getElementById('skillsModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Initialize skills modal when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initSkillsModal();
+});
 
 // Work data with multiple images for each work (global scope)
 const worksData = {
