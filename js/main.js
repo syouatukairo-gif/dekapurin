@@ -884,13 +884,13 @@ function initWorkCategories() {
         ],
         contest: [
             { title: 'CGWORLD 2024年6月号 掲載', year: '2023', image: 'images/work25.png', workId: 'work5' },
-            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', year: '2024', image: 'images/work41.png', workId: 'work7' },
+            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', year: '2024', image: 'images/work41.png', workId: 'work6' },
             { title: '大阪芸術大学ダヴィンチコンテスト 審査員賞', year: '2024', image: 'images/work14.png', workId: 'work14' }
         ],
         personal: [
             { title: 'ハードサーフィスキャラクター製作', year: '2023', image: 'images/work26.png', workId: 'work9' },
             { title: 'ハードサーフィスキャラクター製作2', year: '2024', image: 'images/work16.png', workId: 'work10' },
-            { title: 'CHASE', year: '2024', image: 'images/work28.png', workId: 'work28' },
+            { title: 'CHASE', year: '2024', image: 'images/work28.png', workId: 'work7' },
             { title: 'U30 3DCG Vision Contest 2022', year: '2024', image: 'images/work9.png', workId: 'work8' }
         ]
     };
@@ -962,7 +962,7 @@ const worksData = {
     'work1': {
         title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示',
         year: '2024',
-        images: ['images/work2.png', 'images/work2.png', 'images/work3.png', 'images/work4.png'],
+        images: ['images/work2.png', 'images/work47.png', 'images/work3.png'],
         description: `
             <h4>概要</h4>
             <p>京都市立芸大卒業展示作品に参加。<br>実写映像とCGを組み合わせた展示用映像制作。</p>
@@ -1006,7 +1006,7 @@ const worksData = {
     'work4': {
         title: '香蘭ファッション専門学校様',
         year: '2024',
-        images: ['images/work4.png', 'images/work37.png', 'images/work2.png', 'images/work3.png'],
+        images: ['images/work4.png', 'images/work37.png'],
         description: `
             <h4>概要</h4>
             <p>香蘭ファッションデザイン専門学校の公式Webページに使用される、ファーストビュー映像を制作。</p>
