@@ -2727,6 +2727,60 @@ footer {
     display: inline-block;
 }
 
+.modal-video-link {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.youtube-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.youtube-link:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.youtube-icon {
+    font-size: 1.2rem;
+}
+
+.web-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.web-link:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.web-icon {
+    font-size: 1.2rem;
+}
+
 /* Modal responsive */
 @media (max-width: 768px) {
     .modal-content {
@@ -2793,18 +2847,6 @@ footer {
     
     .image-nav-area:hover {
         opacity: 1;
-    }
-    
-    .modal-video-container {
-        width: 100%;
-        height: 400px;
-        margin-bottom: 1rem;
-    }
-    
-    .modal-video {
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
     }
 }
 

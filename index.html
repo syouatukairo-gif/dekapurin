@@ -291,25 +291,27 @@
         <div class="modal-content">
             <button class="modal-close">&times;</button>
             <div class="modal-body">
-                <div class="modal-media-container">
-                    <div class="modal-video-container" id="modalVideoContainer" style="display: none;">
-                        <iframe id="modalVideo" src="" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen 
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                loading="eager"
-                                class="modal-video"></iframe>
-                    </div>
-                    <div class="modal-image-container" id="modalImageContainer">
-                        <div class="image-nav-area image-nav-left"></div>
-                        <img id="modalImage" src="" alt="" class="modal-image">
-                        <div class="image-nav-area image-nav-right"></div>
-                    </div>
+                <div class="modal-image-container">
+                    <div class="image-nav-area image-nav-left"></div>
+                    <img id="modalImage" src="" alt="" class="modal-image">
+                    <div class="image-nav-area image-nav-right"></div>
                 </div>
                 <div class="modal-info">
                     <h2 id="modalTitle"></h2>
                     <p id="modalYear"></p>
                     <div id="modalDescription"></div>
+                    <div class="modal-video-link" id="modalVideoLink" style="display: none;">
+                        <a href="" target="_blank" rel="noopener noreferrer" class="youtube-link">
+                            <span class="youtube-icon">▶</span>
+                            YouTubeで動画を見る
+                        </a>
+                    </div>
+                    <div class="modal-video-link" id="modalWebLink" style="display: none;">
+                        <a href="" target="_blank" rel="noopener noreferrer" class="web-link">
+                            <span class="web-icon">🔗</span>
+                            ウェブサイトを見る
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

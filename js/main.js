@@ -873,8 +873,8 @@ function initWorkCategories() {
             { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', year: '2024', image: 'images/work41.png' },
             { title: 'CHASE', year: '2024', image: 'images/work28.png' },
             { title: 'U30 3DCG Vision Contest 2022', year: '2024', image: 'images/work9.png' },
-            { title: 'ハードサーフィスキャラクター製作', year: '2023', image: 'images/work26.png' },
-            { title: 'ハードサーフィスキャラクター製作2', year: '2024', image: 'images/work16.png' }
+            { title: 'オリジナルキャラクター制作', year: '2023', image: 'images/work58.png' },
+            { title: 'ハードサーフィスキャラクター製作1', year: '2024', image: 'images/work16.png' }
         ],
         work: [
             { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', year: '2024', image: 'images/work2.png' },
@@ -888,8 +888,8 @@ function initWorkCategories() {
             { title: '大阪芸術大学ダヴィンチコンテスト 審査員賞', year: '2024', image: 'images/work14.png', workId: 'work14' }
         ],
         personal: [
-            { title: 'ハードサーフィスキャラクター製作', year: '2023', image: 'images/work26.png', workId: 'work9' },
-            { title: 'ハードサーフィスキャラクター製作2', year: '2024', image: 'images/work16.png', workId: 'work10' },
+            { title: 'オリジナルキャラクター制作', year: '2023', image: 'images/work58.png', workId: 'work9' },
+            { title: 'ハードサーフィスキャラクター製作1', year: '2024', image: 'images/work16.png', workId: 'work10' },
             { title: 'CHASE', year: '2024', image: 'images/work28.png', workId: 'work7' },
             { title: 'U30 3DCG Vision Contest 2022', year: '2024', image: 'images/work9.png', workId: 'work8' }
         ]
@@ -962,8 +962,8 @@ const worksData = {
     'work1': {
         title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示',
         year: '2024',
-        images: ['images/work2.png', 'images/work47.png', 'images/work3.png'],
-        video: 'https://www.youtube-nocookie.com/embed/E92X2jweWuo?enablejsapi=1&origin=' + window.location.origin,
+        images: ['images/work2.png', 'images/work47.png', 'images/work50.png','images/work51.png'],
+        videoLink: 'https://www.youtube.com/watch?v=E92X2jweWuo',
         description: `
             <h4>概要</h4>
             <p>京都市立芸大卒業展示作品に参加。<br>実写映像とCGを組み合わせた展示用映像制作。</p>
@@ -977,6 +977,7 @@ const worksData = {
         title: '祇園銀座百鬼夜行<br>三菱銀行展示',
         year: '2024',
         images: ['images/work1.png', 'images/work31.png', 'images/work32.png', 'images/work33.png'],
+        videoLink: 'https://youtu.be/b4WSPwbQlGo',
         description: `
             <h4>概要</h4>
             <p>卒業展示作品をもとに、三菱協力による個展向け新作映像を制作。</p>
@@ -989,25 +990,27 @@ const worksData = {
     },
     'work3': {
         title: 'metaherose様万博用キャラクター製作',
-        year: '2024',
-        images: ['images/work3.png', 'images/work35.png', 'images/work36.png', 'images/work34.png'],
+        year: '2025',
+        images: ['images/work3.png', 'images/work35.png', 'images/work36.png', 'images/work52.png'],
+        videoLink: 'https://youtu.be/nVYChd6MMo4',
         description: `
             <h4>概要</h4>
-            <p>インターンとして参加していた企業が、大阪・関西万博に<br>2日間限定で出展するにあたり、
-            ブースのオープニング映像で<br>使用するキャラクター制作を担当しました。</p>
+            <p>インターン先企業の大阪・関西万博2日間限定出展に際し、<br>ブース用オープニング映像のキャラクター制作を担当しました。</p>
             
             <h4>担当</h4>
             <p>キャラクターデザイン/3Dモデリング/リギング/シェーディング</p>
 
             <h4>ポイント</h4>
-            <p>・2週間という短納期の中で、デザイン,3Dモデリング,リギングまでを一貫して担当<br>・企業ロゴの「M」を胸部やシルエットに自然に組み込む形でのキャラクターデザイン</p>
+            <p>・2週間という短納期の中で、全ての工程を一貫して担当<br>・企業ロゴの「M」を胸部などに自然に組み込むキャラクターデザイン</p>
 
         `
     },
     'work4': {
         title: '香蘭ファッション専門学校様',
-        year: '2024',
+        year: '2025',
         images: ['images/work4.png', 'images/work37.png'],
+        videoLink: 'https://koran.jp/',
+        isVideoLink: false,
         description: `
             <h4>概要</h4>
             <p>香蘭ファッションデザイン専門学校の公式Webページに使用される、ファーストビュー映像を制作。</p>
@@ -1021,7 +1024,8 @@ const worksData = {
     'work5': {
         title: 'CGWORLD 2024年.6月号 掲載',
         year: '2024',
-        images: ['images/work24.png', 'images/work5.png', 'images/work39.png', 'images/work8.png'],
+        images: ['images/work24.png', 'images/work5.png', 'images/work39.png', 'images/work53.png'],
+        videoLink: 'https://www.youtube.com/shorts/DjV7PhVspKA',
         description: `
             <h4>概要</h4>
             <p>2022年10月頃にXで上げていた作品をCGWORLDの担当さんに見つけていただき掲載の流れになりました。</p>
@@ -1035,99 +1039,88 @@ const worksData = {
     },
     'work6': {
         title: '東京国際プロジェクションマッピングアワード vol.10 審査員賞',
-        year: '2024',
+        year: '2025',
         images: ['images/work41.png', 'images/work7.png', 'images/work42.png', 'images/work43.png'],
+        videoLink: 'https://www.youtube.com/watch?v=_-FzchqMP8E',
         description: `
             <h4>概要</h4>
-            <p>クラシックなバイクの3Dモデリング。レトロなデザインとモダンな技術の融合をテーマに制作しました。</p>
-            <p>エンジン部分は特に詳細にモデリングし、ピストンの動きや配管のルーティングまで再現しています。フレームやサスペンションも実際のバイクの構造を参考にしています。</p>
-            
+            <p>東京国際プロジェクションマッピングアワードに5人チームで参加。</p>
             <h4>担当</h4>
-            <p>ハードサーフェスモデリング、メカニカルデザイン、マテリアル制作</p>
-            <p>質感では磨かれた金属部分と、経年変化したパーツの対比を楽しみながら、リアルなマテリアル表現を追求しました。</p>
+            <p>映像制作 冒頭・終盤シーン ※全体約1分30秒のうち、約40秒/全体方針設計</p>
             <h4>ポイント</h4>
-            <p>レトロとモダンの融合表現</p><p>エンジンなどの詳細なメカニカル再現</p><p>質感による経年変化の表現</p>
+            <p>・建物形状に合わせたプロジェクションマッピング表現を前提に、構図と動きを設計<br>・音楽制作者と密に連携し、音ハメやシーンのインパクトについて最終段階まで調整<br>・冒頭とラストという印象を左右するシーンを担当し、作品の導入と締めを設計</p>
         `
+
     },
     'work7': {
         title: 'CHASE',
-        year: '2024',
-        images: ['images/work28.png', 'images/work8.png', 'images/work44.png', 'images/work2.png'],
+        year: '2025',
+        images: ['images/work28.png', 'images/work8.png', 'images/work44.png', 'images/work56.png'],
+        videoLink: 'https://youtu.be/5iE0vvYq6l8',
         description: `
             <h4>概要</h4>
-            <p>自主制作プロジェクト「都市探検ドローン」。コンセプトは「狭小空間での調査活動」。</p>
-            <p>実際の都市環境を想定し、建物の間や地下空間での活動をシミュレーション。ドローンの飛行性能とカメラ性能を両立させる設計を目指しました。</p>
-            
+            <p>大学授業の自由企画として約2分の動画作品を制作。<br>賛同メンバーとチームを組み、世界観設計から完成までを主導しました。</p>
             <h4>担当</h4>
-            <p>企画立案、コンセプトデザイン、3Dモデリング、シミュレーション</p>
-            <p>プロポーションやカラーリングにこだわり、実用性と美観のバランスを追求しています。</p>
+            <p>総監督/CG制作全般/制作進行/脚本</p>
             <h4>ポイント</h4>
-            <p>狭小空間での活動シミュレーション</p><p>実用性と美観の両立</p><p>都市環境を想定した設計思想</p>
+            <p>・企画立案者としてチームを立ち上げ、作品全体の方向性と世界観設計を担当<br>・世界観の統一を重視し、ホワイトボードなどを用いた対面説明で認識のズレを防止。<br>・短納期かつトラブルが重なる中でも、最終的に作品を完成させ、チーム制作として成立させた</p>
         `
     },
     'work8': {
         title: 'U30 3DCG Vision Contest 2022',
-        year: '2024',
-        images: ['images/work9.png', 'images/work46.png', 'images/work45.png', 'images/work3.png'],
+        year: '2022',
+        images: ['images/work9.png', 'images/work46.png', 'images/work45.png', 'images/work57.png'],
+        videoLink: 'https://youtu.be/pCVGDmeJFVM',
         description: `
             <h4>概要</h4>
-            <p>スキルアップのために制作した練習用モデル。テーマは「有機と無機の融合」。</p>
-            <p>生物的な要素と機械的な要素を組み合わせ、新しいデザイン表現を模索。テクスチャでは生物の質感と金属質感の両方を表現しました。</p>
+            <p>コンテストに向けて制作した、個人制作の映像作品。<br>結果として受賞には至らなかったが、3DCGによる映像作品を初めて制作したプロジェクトです。</p>
             
             <h4>担当</h4>
-            <p>スカルプト、ハードサーフェスモデリング、テクスチャリング</p>
-            <p>この制作を通じて、スカルプト技術とハードサーフェスモデリングの両方を習得し、総合的なモデリングスキルを向上させました。</p>
+            <p>3DCG制作/アニメーション/映像編集</p>
             <h4>ポイント</h4>
-            <p>有機と無機の融合表現</p><p>スカルプトとハードサーフェスの両技術習得</p><p>質感による表現力の向上</p>
+            <p>・モチーフとして選んだバイクについて、外観だけでなく構造理解を重視<br>・見た目の再現に留まらず、「内部構造まで把握した上で作る」姿勢を重視</p>
         `
     },
     'work9': {
-        title: 'ハードサーフェスキャラクター',
-        year: '2024',
-        images: ['images/work6.png', 'images/work7.png', 'images/work8.png', 'images/work9.png'],
+        title: 'オリジナルキャラクター制作',
+        year: '2025',
+        images: ['images/work58.png', 'images/work59.png', 'images/work60.png', 'images/work61.png'],
         description: `
             <h4>概要</h4>
-            <p>2025年大阪万博の公式キャラクターとして採用された作品。</p>
-            <p>日本の伝統文化と未来技術を融合させたキャラクターデザインで、審査員から高い評価を得ました。</p>
+            <p>個人コンテンツの主人公として制作している3DCGキャラクター。<br>アニメ的すぎず、かといって実写寄りにもなりすぎない、自分なりのルックを模索するための継続的な研究制作です。</p>
             
             <h4>担当</h4>
-            <p>キャラクターデザイン、3Dモデリング、プロトタイプ製作</p>
-            <p>3Dプリント技術を活用し、実際のフィギュア製作も視野に入れて制作しました。</p>
+            <p>キャラクターコンセプト/ラフデザイン/スカルプトモデリング</p>
             <h4>ポイント</h4>
-            <p>万博公式採用という実績</p><p>伝統文化と未来技術の融合デザイン</p><p>3Dプリント技術の実践的活用</p>
+            <p>・人体構造の理解を前提に、骨格や筋肉の流れを意識したスカルプトを重視<br>・マテリアルやシェーダー表現について試行錯誤を行い、質感の方向性を検討中<br>・「かわいさとは何か」をテーマに、記号化と生々しさの境界を探りながら造形バランスを模索</p>
         `
     },
     'work10': {
-        title: 'ハードサーフィスキャラクター2',
-        year: '2024',
-        images: ['images/work16.png', 'images/25.png', 'images/work2.png', 'images/work3.png'],
+        title: 'ハードサーフィスキャラクター1',
+        year: '2026',
+        images: ['images/work16.png', 'images/25.png', 'images/work49.png', 'images/work48.png'],
+        videoLink: 'https://youtu.be/d2KwTnd51R0',
         description: `
             <h4>概要</h4>
-            <p>スキルアップのために制作した練習用モデル。テーマは「有機と無機の融合」。</p>
-            <p>生物的な要素と機械的な要素を組み合わせ、新しいデザイン表現を模索。テクスチャでは生物の質感と金属質感の両方を表現しました。</p>
-            
+            <p>授業課題<br>必要な役割から構造を考えた四足歩行ロボット3Dモデル。</p>
             <h4>担当</h4>
-            <p>スカルプト、ハードサーフェスモデリング、テクスチャリング</p>
-            <p>この制作を通じて、スカルプト技術とハードサーフェスモデリングの両方を習得し、総合的なモデリングスキルを向上させました。</p>
+            <p>コンセプト設計/機能要件定義/形状設計/3Dモデリング</p>
             <h4>ポイント</h4>
-            <p>有機と無機の融合表現</p><p>スカルプトとハードサーフェスの両技術習得</p><p>質感による表現力の向上</p>
+            <p>・山岳踏破に必要な機能要件を定義し、機能を基準に形状を逆算して設計<br>・動物的なシルエットは意図的な演出ではなく、機能追求の結果として生まれた造形<br>・威圧感を社会的視点で再解釈し、警護ユニットという用途へ拡張したコンセプト設計</p>
         `
     },
     'work14': {
         title: '大阪芸術大学ダヴィンチコンテスト 審査員賞',
-        year: '2024',
+        year: '2023',
         images: ['images/work14.png', 'images/work1.png', 'images/work2.png', 'images/work3.png'],
+        videoLink: 'https://youtu.be/eLqyU0VYUrU',
         description: `
             <h4>概要</h4>
-            <p>大阪芸術大学主催のダヴィンチコンテストで審査員賞を受賞。</p>
-            <p>3DCG技術と芸術的表現を融合させた作品が高く評価されました。</p>
-            
+            <p>ダヴィンチコンテストに応募するため、約5分間の手描きアニメーション作品を個人制作。<br>企画立案から完成までを一人で担当しました<br本作は、現在の制作スタイルに至る以前の試行錯誤を含んだ、作家活動の初期段階にあたる作品です。></p>          
             <h4>担当</h4>
-            <p>コンセプトデザイン、3Dモデリング、レンダリング</p>
-            <p>コンテストのテーマに沿った独自の表現手法を開発し、技術力と創造性の両面で評価を得ました。</p>
-            
+            <p>総監督/脚本/作画/アニメーション/CG制作全般/制作進行（全工程を一人で担当）</p>
             <h4>ポイント</h4>
-            <p>審査員賞という高い評価の獲得</p><p>芸術性と技術性の融合表現</p><p>大学主催コンテストでの実績</p>
+            <p>・本プロジェクトを通じて、遠い目標を達成するための戦略、エンタメとしての本質、過酷な制作を乗り越える力を学び、今の自分を支える全ての技術の礎となりました。</p><p>・技術的には未熟な部分もありますが、約5分間の手描きアニメーションを一人で完成させたことが、その後の制作の出発点となりました。</p><p>・そして何より、この挑戦が自分自身を救ってくれたと感じています。</p>
         `
     }
 };
@@ -1148,32 +1141,29 @@ function openModal(workId) {
     modalTitle.innerHTML = work.title;
     modalYear.textContent = work.year;
     modalDescription.innerHTML = work.description;
+    modalImage.src = work.images[0];
+    modalImage.alt = work.title;
     
-    // Check if work has video
-    const modalVideoContainer = document.getElementById('modalVideoContainer');
-    const modalVideo = document.getElementById('modalVideo');
-    const modalImageContainer = document.getElementById('modalImageContainer');
+    // Handle links
+    const modalVideoLink = document.getElementById('modalVideoLink');
+    const modalWebLink = document.getElementById('modalWebLink');
+    const videoLink = modalVideoLink.querySelector('a');
+    const webLink = modalWebLink.querySelector('a');
     
-    if (work.video) {
-        // Show video
-        modalVideoContainer.style.display = 'block';
-        modalImageContainer.style.display = 'none';
-        
-        // Force disable lazy loading
-        modalVideo.loading = 'eager';
-        modalVideo.removeAttribute('loading');
-        
-        // Set video source
-        modalVideo.src = work.video;
-        
-        // Force load the iframe
-        modalVideo.dispatchEvent(new Event('load'));
-    } else {
-        // Show images
-        modalVideoContainer.style.display = 'none';
-        modalImageContainer.style.display = 'flex';
-        modalImage.src = work.images[0];
-        modalImage.alt = work.title;
+    // Hide both links initially
+    modalVideoLink.style.display = 'none';
+    modalWebLink.style.display = 'none';
+    
+    if (work.videoLink) {
+        if (work.isVideoLink === false) {
+            // Show web link
+            webLink.href = work.videoLink;
+            modalWebLink.style.display = 'block';
+        } else {
+            // Show YouTube link
+            videoLink.href = work.videoLink;
+            modalVideoLink.style.display = 'block';
+        }
     }
     
     workModal.classList.add('active');
