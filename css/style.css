@@ -2794,6 +2794,18 @@ footer {
     .image-nav-area:hover {
         opacity: 1;
     }
+    
+    .modal-video-container {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-video {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
 }
 
 /* タブレット向けモーダル調整 */

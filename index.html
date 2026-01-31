@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>dekapurin - 3DCG Creator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="com.dekapurin.portfolio">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="frame-src https://www.youtube-nocookie.com; child-src https://www.youtube-nocookie.com;">
+    <title>dekapurin - 3DCG Artist</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -289,10 +291,20 @@
         <div class="modal-content">
             <button class="modal-close">&times;</button>
             <div class="modal-body">
-                <div class="modal-image-container">
-                    <div class="image-nav-area image-nav-left"></div>
-                    <img id="modalImage" src="" alt="" class="modal-image">
-                    <div class="image-nav-area image-nav-right"></div>
+                <div class="modal-media-container">
+                    <div class="modal-video-container" id="modalVideoContainer" style="display: none;">
+                        <iframe id="modalVideo" src="" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen 
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                loading="eager"
+                                class="modal-video"></iframe>
+                    </div>
+                    <div class="modal-image-container" id="modalImageContainer">
+                        <div class="image-nav-area image-nav-left"></div>
+                        <img id="modalImage" src="" alt="" class="modal-image">
+                        <div class="image-nav-area image-nav-right"></div>
+                    </div>
                 </div>
                 <div class="modal-info">
                     <h2 id="modalTitle"></h2>

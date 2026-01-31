@@ -963,6 +963,7 @@ const worksData = {
         title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示',
         year: '2024',
         images: ['images/work2.png', 'images/work47.png', 'images/work3.png'],
+        video: 'https://www.youtube-nocookie.com/embed/E92X2jweWuo?enablejsapi=1&origin=' + window.location.origin,
         description: `
             <h4>概要</h4>
             <p>京都市立芸大卒業展示作品に参加。<br>実写映像とCGを組み合わせた展示用映像制作。</p>
@@ -1147,8 +1148,33 @@ function openModal(workId) {
     modalTitle.innerHTML = work.title;
     modalYear.textContent = work.year;
     modalDescription.innerHTML = work.description;
-    modalImage.src = work.images[0];
-    modalImage.alt = work.title;
+    
+    // Check if work has video
+    const modalVideoContainer = document.getElementById('modalVideoContainer');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalImageContainer = document.getElementById('modalImageContainer');
+    
+    if (work.video) {
+        // Show video
+        modalVideoContainer.style.display = 'block';
+        modalImageContainer.style.display = 'none';
+        
+        // Force disable lazy loading
+        modalVideo.loading = 'eager';
+        modalVideo.removeAttribute('loading');
+        
+        // Set video source
+        modalVideo.src = work.video;
+        
+        // Force load the iframe
+        modalVideo.dispatchEvent(new Event('load'));
+    } else {
+        // Show images
+        modalVideoContainer.style.display = 'none';
+        modalImageContainer.style.display = 'flex';
+        modalImage.src = work.images[0];
+        modalImage.alt = work.title;
+    }
     
     workModal.classList.add('active');
     document.body.style.overflow = 'hidden';
