@@ -1,3 +1,29 @@
+// IP Image Responsive
+function initIPImageResponsive() {
+    const pcImage = document.getElementById('ipBannerImage');
+    const mobileImage = document.getElementById('ipBannerImageMobile');
+    
+    function updateImageDisplay() {
+        const isMobile = window.innerWidth <= 768;
+        
+        if (pcImage && mobileImage) {
+            if (isMobile) {
+                pcImage.style.display = 'none';
+                mobileImage.style.display = 'block';
+            } else {
+                pcImage.style.display = 'block';
+                mobileImage.style.display = 'none';
+            }
+        }
+    }
+    
+    // Initial check
+    updateImageDisplay();
+    
+    // Update on window resize
+    window.addEventListener('resize', updateImageDisplay);
+}
+
 // Loading Animation
 function initLoadingAnimation() {
     const loadingScreen = document.getElementById('loadingScreen');
@@ -189,6 +215,9 @@ function fixMobileViewportHeight() {
 document.addEventListener('DOMContentLoaded', function() {
     // Start loading animation immediately
     initLoadingAnimation();
+    
+    // Initialize IP image responsive
+    initIPImageResponsive();
     
     // Initialize mobile menu
     initMobileMenu();

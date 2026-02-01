@@ -1001,6 +1001,26 @@ section.cover {
     .year {
         min-width: auto;
     }
+    
+    /* IP Mobile Image */
+    .ip-banner-mobile {
+        display: block;
+        width: 40%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .ip-banner #ipBannerImage {
+        display: none;
+    }
+    
+    /* Language UI for mobile - bottom left corner */
+    .language-ui {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1001;
+    }
 }
 
 /* WORKSセクション */
@@ -1182,6 +1202,14 @@ section.cover {
 }
 
 .ip-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.ip-banner-mobile {
+    display: none;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -1460,10 +1488,6 @@ footer {
         right: 15%;
     }
     
-    .main-visual img {
-        width: 120%;
-    }
-    
     .subtitle-section {
         left: 3%;
     }
@@ -1701,37 +1725,38 @@ footer {
         position: absolute;
         z-index: 3;
         max-width: 50%;
-        max-height: 60vh;
+        max-height: 40vh;
         top: 20%;
         left: 25vw;
         transform: translateX(-50%) translateY(-50%);
     }
 
-    .main-visual img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
+.main-visual img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+}
 
-    .skill-line {
-        position: absolute;
-        top: 38%;
-        left: 4%;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-        max-width: 300px;
-    }
+.skill-line {
+    position: absolute;
+    top: 38%;
+    left: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 300px;
+}
 
-    .skill-line-text {
-        font-size: 1.3rem;
-        font-weight: 650;
-        color: #000;
-    }
+.skill-line-text {
+    font-size: 1.3rem;
+    font-weight: 650;
+    color: #000;
+}
 
-    .skill-description {
-        max-width: 280px;
-    }
+.skill-description {
+    max-width: 280px;
+}
 
     .skill-description p {
         margin: 0 0 0.2rem 0;
@@ -2689,8 +2714,23 @@ footer {
     
     /* 言語切り替えUIの調整 */
     .language-ui {
-        bottom: 25px;
-        left: 25px;
+        bottom: 20px;
+        left: -30px;
+    }
+    
+    /* メインビジュアル - タブレットではPCと同じ縮尺 */
+    .main-visual {
+        max-width: 60%;
+        max-height: 70vh;
+        top: 20%;
+        left: 25vw;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    .main-visual img {
+        width: 145%;
+        height: auto;
+        object-fit: contain;
     }
     
     /* ローディング画面の調整 */
