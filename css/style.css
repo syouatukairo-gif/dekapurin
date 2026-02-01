@@ -1724,19 +1724,20 @@ footer {
     .main-visual {
         position: absolute;
         z-index: 3;
-        max-width: 50%;
-        max-height: 40vh;
-        top: 20%;
-        left: 25vw;
-        transform: translateX(-50%) translateY(-50%);
+        max-width: 80%;
+        max-height: 60vh;
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+        display: block;
     }
 
-.main-visual img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    opacity: 0;
-}
+    .main-visual img {
+        width: 625%;
+        height: auto;
+        object-fit: contain;
+        opacity: 1;
+    }
 
 .skill-line {
     position: absolute;
@@ -1749,24 +1750,131 @@ footer {
 }
 
 .skill-line-text {
-    font-size: 1.3rem;
-    font-weight: 650;
-    color: #000;
-}
 
-.skill-description {
-    max-width: 280px;
-}
+        .skill-description {
+            max-width: 280px;
+        }
+        
+        .skill-description p {
+            margin: 0 0 0.8rem 0 !important;
+            font-size: 0.85rem !important;
+            line-height: 1.5 !important;
+            color: #333 !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        .skill-description p:first-child {
+            margin-top: 0 !important;
+        }
+        
+        .skill-description p:last-child {
+            margin-bottom: 0 !important;
+        }
 
-    .skill-description p {
-        margin: 0 0 0.2rem 0;
-        font-size: 0.85rem;
-        line-height: 1.5;
-        color: #333;
+        .skill-content {
+            max-height: none;
+            overflow: visible;
+            opacity: 1;
+            transition: none;
+        }
+        
+        .skill-content-toggle {
+            display: none;
+        }
+        
+        /* スキルコンテンツを常に表示 - スマホのみ */
+        .skill-content {
+            display: block !important;
+            max-height: none !important;
+            height: auto !important;
+            overflow: visible !important;
+            opacity: 1 !important;
+            transition: none !important;
+        }
+        
+        .skill-content p {
+            display: block !important;
+            visibility: visible !important;
+            margin: 0 0 0.8rem 0 !important;
+            font-size: 0.9rem !important;
+            line-height: 1.6 !important;
+            color: #333 !important;
+            opacity: 1 !important;
+        }
+        
+        .skill-content h3 {
+            display: block !important;
+            visibility: visible !important;
+            margin-bottom: 1rem !important;
+            font-size: 1.1rem !important;
+            font-weight: 600 !important;
+            color: #000 !important;
+            opacity: 1 !important;
+        }
+        
+        /* トグルボタンを完全に非表示 */
+        .skill-content-toggle,
+        .toggle-button {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        .toggle-button {
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 0.8rem;
+            cursor: pointer;
+            padding: 0;
+            text-decoration: underline;
+            font-family: inherit;
+            transition: color 0.2s ease;
+        }
+        opacity: 1;
+        transition: none;
     }
-
+    
     .skill-content-toggle {
-        margin-top: 0.2rem;
+        display: none;
+    }
+    
+    /* スキルコンテンツを常に表示 - スマホのみ */
+    .skill-content {
+        display: block !important;
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        transition: none !important;
+    }
+    
+    .skill-content p {
+        display: block !important;
+        visibility: visible !important;
+        margin: 0 0 0.8rem 0 !important;
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        color: #333 !important;
+        opacity: 1 !important;
+    }
+    
+    .skill-content h3 {
+        display: block !important;
+        visibility: visible !important;
+        margin-bottom: 1rem !important;
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
+        color: #000 !important;
+        opacity: 1 !important;
+    }
+    
+    /* トグルボタンを完全に非表示 */
+    .skill-content-toggle,
+    .toggle-button {
+        display: none !important;
+        visibility: hidden !important;
     }
 
     .toggle-button {
