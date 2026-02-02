@@ -1623,7 +1623,7 @@ footer {
         z-index: 1;
         font-family: 'Helvetica Neue', Arial, sans-serif;
         top: 50%;
-        left: 27%;
+        left: 33%;
         transform: translate(-50%, -50%);
         white-space: nowrap;
         pointer-events: none;
@@ -1677,6 +1677,7 @@ footer {
     }
     
     .work-ip-text {
+        top: 90%;
         font-size: 1.6rem;
         font-weight: 650;
         color: #000;
