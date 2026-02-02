@@ -209,13 +209,7 @@ body {
     cursor: none;
 }
 
-/* スマホ／タブレットでは無効 */
-@media (max-width: 768px) {
-    .cursor-dot,
-    .cursor-trail {
-        display: none;
-    }
-}
+/* スマホ／タブレットでは無効 - 統合されたため削除 */
 
 @keyframes fadeOut {
     from { 
@@ -401,22 +395,7 @@ header {
     background-color: #f5f5f5;
 }
 
-/* モバイル用スタイル */
-@media (max-width: 768px) {
-    /* PC用ヘッダーを非表示 */
-    header {
-        display: none;
-    }
-    
-    /* スマホ用ハンバーガーメニューを表示 */
-    .menu-ui {
-        display: flex;
-    }
-    
-    .menu-ui-right {
-        display: flex;
-    }
-}
+/* モバイル用スタイル - 統合されたため削除 */
 
 main {
     margin-left: 0;
@@ -542,19 +521,42 @@ main {
     color: #333;
     animation: bounce 2s infinite;
 }
-.skill-line{
+/* Work & Original IP 独立セクション */
+.work-ip-section {
     position: absolute;
-    top: 38%;
+    top: 70%;
     left: 4%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
+    max-width: 300px;
+    z-index: 4;
 }
 
-.skill-line-text{
+.work-ip-text {
     font-size: 1.6rem;
     font-weight: 650;
     color: #000;
+}
+
+/* スマホ用 */
+@media (max-width: 768px) {
+    .work-ip-section {
+        position: absolute;
+        top: 70%;
+        left: 4%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        max-width: 300px;
+        z-index: 4;
+    }
+    
+    .work-ip-text {
+        font-size: 1.6rem;
+        font-weight: 650;
+        color: #000;
+    }
 }
 
 .skill-subtitle {
@@ -684,10 +686,16 @@ main {
     transform: translateX(-50%) translateY(-50%);
 }
 
-.main-visual img {
+/* PC用の画像表示設定 */
+.main-visual .pc-image {
+    display: block; /* PC用画像を表示 */
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+.main-visual .mobile-image {
+    display: none; /* スマホ用画像を非表示 */
 }
 
 /* セクションヘッダー */
@@ -955,73 +963,7 @@ section.cover {
     }
 }
 
-/* About Mobile Responsive */
-@media (max-width: 768px) {
-    .about-content-bottom {
-        position: static;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        width: 100%;
-    }
-    
-    .about-left {
-        gap: 2rem;
-    }
-    
-    .about-icon {
-        position: static;
-        width: 150px;
-        height: 150px;
-    }
-    
-    .about-info {
-        position: static;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-        margin-left: 0;
-        margin-top: 0;
-    }
-    
-    .about-name-en {
-        font-size: 1.5rem;
-    }
-    
-    .about-name-ja {
-        font-size: 1.1rem;
-    }
-    
-    .history-item {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .year {
-        min-width: auto;
-    }
-    
-    /* IP Mobile Image */
-    .ip-banner-mobile {
-        display: block;
-        width: 40%;
-        height: auto;
-        margin: 0 auto;
-    }
-    
-    .ip-banner #ipBannerImage {
-        display: none;
-    }
-    
-    /* Language UI for mobile - bottom left corner */
-    .language-ui {
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-        z-index: 1001;
-    }
-}
+/* About Mobile Responsive - 統合されたため削除 */
 
 /* WORKSセクション */
 .works-content {
@@ -1386,25 +1328,7 @@ section.cover {
     border-bottom-color: #000;
 }
 
-/* IP responsive */
-@media (max-width: 768px) {
-    .ip-banner-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    
-    .ip-banner {
-        height: 400px;
-    }
-    
-    .ip-info-panel {
-        text-align: center;
-    }
-    
-    .ip-image-nav-area {
-        width: 20%;
-    }
-}
+/* IP responsive - 統合されたため削除 */
 
 /* CONTACTセクション */
 .contact-content {
@@ -1698,8 +1622,8 @@ footer {
         letter-spacing: -0.05em;
         z-index: 1;
         font-family: 'Helvetica Neue', Arial, sans-serif;
-        top: 15%;
-        left: 25%;
+        top: 50%;
+        left: 27%;
         transform: translate(-50%, -50%);
         white-space: nowrap;
         pointer-events: none;
@@ -1723,34 +1647,25 @@ footer {
     }
 
     .main-visual {
-        position: absolute;
-        z-index: 3;
-        max-width: none;
-        max-height: none;
-        width: 300vw;
-        height: 300vh;
-        top: 40%;
-        right: 0%;
-        transform: translateY(-50%);
-        display: block;
-        overflow: visible;
+        width: 100vw;        /* 画面の幅ピッタリ */
+        height: 100vh;       /* 画面の高さピッタリ */
+        top: -10%;              /* 上端から */
+        left: 0;             /* 左端から */
+        transform: none;     
     }
 
-    .main-visual img {
-        width: 400%;
-        object-fit: contain;
-        opacity: 1;
-        min-width: 400%;
-        transform: scale(80);
-    }
-    
-    
-    /* 灰色レイヤーを完全に削除 */
-    .cover::before {
-        display: none !important;
+    .main-visual .pc-image {
+        display: none; /* PC用画像を非表示 */
     }
 
-    .skill-line {
+    .main-visual .mobile-image {
+        display: block; /* スマホ用画像を表示 */
+        width: 200%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .work-ip-section {
         position: absolute;
         top: 70%;
         left: 4%;
@@ -1758,93 +1673,96 @@ footer {
         flex-direction: column;
         gap: 0.8rem;
         max-width: 300px;
+        z-index: 4;
     }
-
-.skill-line-text {
-
-        .skill-description {
-            max-width: 280px;
-        }
-        
-        .skill-description p {
-            margin: 0 0 0.8rem 0 !important;
-            font-size: 0.85rem !important;
-            line-height: 1.5 !important;
-            color: #333 !important;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-        }
-        
-        .skill-description p:first-child {
-            margin-top: 0 !important;
-        }
-        
-        .skill-description p:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        .skill-content {
-            max-height: none;
-            overflow: visible;
-            opacity: 1;
-            transition: none;
-        }
-        
-        .skill-content-toggle {
-            display: none;
-        }
-        
-        /* スキルコンテンツを常に表示 - スマホのみ */
-        .skill-content {
-            display: block !important;
-            max-height: none !important;
-            height: auto !important;
-            overflow: visible !important;
-            opacity: 1 !important;
-            transition: none !important;
-        }
-        
-        .skill-content p {
-            display: block !important;
-            visibility: visible !important;
-            margin: 0 0 0.8rem 0 !important;
-            font-size: 0.9rem !important;
-            line-height: 1.6 !important;
-            color: #333 !important;
-            opacity: 1 !important;
-        }
-        
-        .skill-content h3 {
-            display: block !important;
-            visibility: visible !important;
-            margin-bottom: 1rem !important;
-            font-size: 1.1rem !important;
-            font-weight: 600 !important;
-            color: #000 !important;
-            opacity: 1 !important;
-        }
-        
-        /* トグルボタンを完全に非表示 */
-        .skill-content-toggle,
-        .toggle-button {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
-        .toggle-button {
-            background: none;
-            border: none;
-            color: #666;
-            font-size: 0.8rem;
-            cursor: pointer;
-            padding: 0;
-            text-decoration: underline;
-            font-family: inherit;
-            transition: color 0.2s ease;
-        }
+    
+    .work-ip-text {
+        font-size: 1.6rem;
+        font-weight: 650;
+        color: #000;
+    }
+    
+    .skill-description {
+        max-width: 280px;
+    }
+    
+    .skill-description p {
+        margin: 0 0 0.8rem 0 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        color: #333 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .skill-description p:first-child {
+        margin-top: 0 !important;
+    }
+    
+    .skill-description p:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    .skill-content {
+        max-height: none;
+        overflow: visible;
         opacity: 1;
         transition: none;
+    }
+    
+    .skill-content-toggle {
+        display: none;
+    }
+    
+    /* スキルコンテンツを常に表示 - スマホのみ */
+    .skill-content {
+        display: block !important;
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        transition: none !important;
+    }
+    
+    .skill-content p {
+        display: block !important;
+        visibility: visible !important;
+        margin: 0 0 0.8rem 0 !important;
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        color: #333 !important;
+        opacity: 1 !important;
+    }
+    
+    .skill-content h3 {
+        display: block !important;
+        visibility: visible !important;
+        margin-bottom: 1rem !important;
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
+        color: #000 !important;
+        opacity: 1 !important;
+    }
+    
+    /* トグルボタンを完全に非表示 */
+    .skill-content-toggle,
+    .toggle-button {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    .toggle-button {
+        background: none;
+        border: none;
+        color: #666;
+        font-size: 0.8rem;
+        cursor: pointer;
+        padding: 0;
+        text-decoration: underline;
+        font-family: inherit;
+        transition: color 0.2s ease;
+        opacity: 1;
     }
     
     .skill-content-toggle {
@@ -2399,26 +2317,6 @@ footer {
         white-space: normal;
         word-wrap: break-word;
         max-width: 90vw;
-    }
-    
-    .main-visual {
-        max-width: 80%;
-        right: 10%;
-    }
-    
-    .main-visual img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-    
-    /* スマホ専用の背景画像設定 */
-    .main-visual {
-        background: url('../images/sumahoyou.png') center/contain no-repeat;
-    }
-    
-    .main-visual img {
-        opacity: 0;
     }
     
     .skill-line {

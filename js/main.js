@@ -650,6 +650,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // メインビジュアル（同じ速度で動く）
                 if (mainVisual) {
+                    // スマホではパララックス効果を無効化
+                    if (window.innerWidth <= 768) {
+                        // スマホでは動かさない
+                        return;
+                    }
+                    
                     const translateY = scrollProgress * 30;
                     const translateX = scrollProgress * 20;
                     const scale = 1 + (scrollProgress * 0.05);
