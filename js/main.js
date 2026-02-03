@@ -139,7 +139,8 @@ function setupMenu(menuTrigger, menuNav, menuOptions, position) {
                 'nav-ip': 'ip',
                 'nav-works': 'works',
                 'nav-about': 'about',
-                'nav-skills': 'skills'
+                'nav-skills': 'skills',
+                'nav-vision': 'vision'
             };
             
             const sectionId = sectionMap[targetId];
@@ -338,17 +339,19 @@ document.addEventListener('DOMContentLoaded', function() {
             'language': 'Language',
             'nav-home': 'Home / ホーム',
             'nav-works': 'Works / 実績一覧',
-            'nav-ip': 'IP / IPコンテンツ',
+            'nav-ip': 'IP / コンテンツ',
             'nav-about': 'About / 自己紹介',
             'nav-skills': 'Skills / スキル',
             'scroll': 'SCROLL',
             'work-ip': 'Work & Original IP',
             'skill-subtitle': 'SF Visuals for Film,',
             'skill-desc-1': '本サイトでは、ロボット／SF世界観を軸とした『受注制作』と『オリジナルIP制作』の両方を扱っています。',
-            'skill-heading-1': '受注制作（Client Work）',
-            'skill-desc-2': '企業・イベント向けに、ロボット／SF世界観を用途や制約に合わせて再設計し、映像や展示として実装しています。ブランディングや演出意図、会場条件を踏まえた上で最適な形に落とし込みます。',
-            'skill-heading-2': 'オリジナルIP制作（Original IP）',
-            'skill-desc-3': '自身の世界観を用いたオリジナル映像作品を制作しています。完成済みの作品を起点に、続編や拡張要素を予約販売する形式で展開し、作品世界そのものを継続的に発展させています。',
+            'skill-heading-1': '・受注制作（Client Work）',
+            'skill-desc-2': '企業・イベント向けに、メインの世界観を用途や制約に合わせて再設計し、映像や展示として実装しています。',
+            'skill-desc-2-2': 'ブランディングや演出意図、会場条件を踏まえた上で最適な形に落とし込みます。',
+            'skill-heading-2': '・オリジナルIP制作（Original IP）',
+            'skill-desc-3': '自身の世界観を用いたオリジナル映像作品を制作しています。',
+            'skill-desc-3-2': '完成済みの作品を起点に、続編や拡張要素を予約販売する形式で展開し、作品世界そのものを継続的に発展させています。',
             'about-title': '自己紹介',
             'about-desc': '映像制作全般をしていてメインは3Dキャラクター製作',
             'history-title': '経歴',

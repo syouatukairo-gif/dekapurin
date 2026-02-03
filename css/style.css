@@ -407,6 +407,7 @@ main {
     height: auto;
     min-height: 100vh;
     position: relative;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -725,6 +726,20 @@ section {
     justify-content: center !important;
     margin: 0 !important;
     height: auto !important;
+}
+
+/* セクション背景色の交互設定 */
+section:nth-child(even) {
+    background: #e9ecef;
+}
+
+section:nth-child(odd) {
+    background: #fff;
+}
+
+/* coverセクションは白背景固定 */
+section.cover {
+    background: #fff !important;
 }
 
 section.about {
@@ -1564,8 +1579,8 @@ footer {
     }
 
     .language-ui {
-        bottom: 80px;
-        left: 15px;
+        bottom: 2%;
+        left: 2%;
         z-index: 1001;
     }
 
@@ -1591,8 +1606,8 @@ footer {
     }
 
     .cover {
-        height: 150vh !important;
-        min-height: 150vh !important;
+        height: 160vh !important;
+        min-height: 160vh !important;
         position: relative;
         display: flex;
         align-items: center;
@@ -1622,7 +1637,7 @@ footer {
         letter-spacing: -0.05em;
         z-index: 1;
         font-family: 'Helvetica Neue', Arial, sans-serif;
-        top: 50%;
+        top: 47%;
         left: 33%;
         transform: translate(-50%, -50%);
         white-space: nowrap;
@@ -1632,7 +1647,7 @@ footer {
 
     .subtitle-section {
         position: absolute;
-        top: 30%;
+        top: 52%;
         left: 4%;
         transform: translate(0, -50%);
         z-index: 2;
@@ -1667,8 +1682,8 @@ footer {
 
     .work-ip-section {
         position: absolute;
-        top: 70%;
-        left: 4%;
+        top: 65%;
+        left: 10%;
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
@@ -1683,8 +1698,16 @@ footer {
         color: #000;
     }
     
+    .work-ip-intro {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+    
     .skill-description {
         max-width: 280px;
+        top:110%;
     }
     
     .skill-description p {
@@ -1828,14 +1851,15 @@ footer {
     .scroll-indicator {
         position: absolute;
         bottom: 5px;
-        left: 200px;
+        left: 74%;
+        top: 55%;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 8px;
         z-index: 5;
+        width: auto;
     }
-
     .scroll-text {
         font-size: 0.8rem;
         font-weight: 600;
@@ -2325,29 +2349,6 @@ footer {
         left: 5%;
     }
     
-    .skill-description {
-        max-width: 80vw;
-    }
-    
-    .skill-description p {
-        font-size: 0.8rem;
-        line-height: 1.4;
-    }
-    
-    .scroll-indicator {
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 100;
-        width: auto;
-        text-align: center;
-        margin-bottom: 0;
-        background: none;
-        backdrop-filter: none;
-        padding: 0;
-        border-bottom: none;
-        white-space: nowrap;
-    }
     
     .section-title {
         font-size: 1.2rem;
@@ -2473,20 +2474,30 @@ footer {
         top: auto;
         bottom: 20px;
         right: 20px;
-        left: auto;
         width: auto;
         height: auto;
         background-color: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
-        border: 1px solid #f0f0f0;
-        border-radius: 50%;
-        padding: 1rem;
+        border-bottom: 1px solid #e0e0e0;
         z-index: 1000;
-        width: 60px;
-        height: 60px;
+        padding: 1rem 2rem;
         display: flex;
         align-items: center;
-        justify-content: center;
+        gap: 1rem;
+        display: none; /* PC用ナビゲーションを非表示 */
+    }
+    
+    .side-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 1001;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        padding: 2rem;
     }
     
     .menu-toggle {
@@ -2569,10 +2580,6 @@ footer {
         color: #000;
     }
     
-    .language-ui {
-        bottom: 100px;
-        left: 15px;
-    }
     
     .language-trigger {
         font-size: 0.7rem;
@@ -2637,11 +2644,6 @@ footer {
     /* スクロールの改善 */
     main {
         scroll-padding-bottom: 80px; /* ボトムナビゲーションの分を確保 */
-    }
-    
-    /* 言語切り替えUIの改善 */
-    .language-ui {
-        bottom: 70px;
     }
     
     /* ローディング画面の調整 */
@@ -2988,7 +2990,7 @@ footer {
 /* Skills Section */
 .skills {
     padding: 120px 0;
-    background: #fff;
+    background: #e9ecef;
 }
 
 .skills-description {
