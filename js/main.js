@@ -625,49 +625,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // パララックス効果
+    // パララックス効果 - 無効化
     function initParallax() {
-        // reduced-motionチェック
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        
-        if (prefersReducedMotion) {
-            return; // アニメーションを無効化
-        }
-
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-            const coverSection = document.getElementById('cover');
-            
-            if (coverSection) {
-                const coverTop = coverSection.offsetTop;
-                const coverHeight = coverSection.offsetHeight;
-                const scrollProgress = Math.min(scrollY / (coverTop + coverHeight), 1);
-                
-                // 背景テキスト（少し遅い）
-                if (backgroundText) {
-                    const translateY = scrollProgress * 30;
-                    const opacity = 1 - (scrollProgress * 0.4);
-                    backgroundText.style.transform = `translate(calc(-50% + ${translateY}px), -50%)`;
-                    backgroundText.style.opacity = opacity;
-                }
-                
-                // メインビジュアル（同じ速度で動く）
-                if (mainVisual) {
-                    // スマホではパララックス効果を無効化
-                    if (window.innerWidth <= 768) {
-                        // スマホでは動かさない
-                        return;
-                    }
-                    
-                    const translateY = scrollProgress * 30;
-                    const translateX = scrollProgress * 20;
-                    const scale = 1 + (scrollProgress * 0.05);
-                    const opacity = 1 - (scrollProgress * 0.4);
-                    mainVisual.style.transform = `translateY(calc(-50% + ${translateY}px)) translateX(${translateX}px) scale(${scale})`;
-                    mainVisual.style.opacity = opacity;
-                }
-            }
-        });
+        // ファーストビューのアニメーションを完全に無効化
+        return;
     }
 
     // フェードインアニメーション

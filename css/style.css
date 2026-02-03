@@ -411,7 +411,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible; /* 見切れた部分も表示 */
     padding: 8rem 4rem;
 }
 
@@ -492,7 +492,6 @@ main {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     top: 15%;
     left: 25%;
-    transform: translate(-50%, -50%);
     white-space: nowrap;
     pointer-events: none;
     line-height: 0.8;
@@ -1606,8 +1605,8 @@ footer {
     }
 
     .cover {
-        height: 160vh !important;
-        min-height: 160vh !important;
+        height: 170vh !important;
+        min-height: 170vh !important;
         position: relative;
         display: flex;
         align-items: center;
@@ -1631,15 +1630,14 @@ footer {
 
     .background-text {
         position: absolute;
-        font-size: 4rem;
+        font-size: 6rem;
         font-weight: 650;
         color: #000;
         letter-spacing: -0.05em;
         z-index: 1;
         font-family: 'Helvetica Neue', Arial, sans-serif;
-        top: 47%;
-        left: 35%;
-        transform: translate(-50%, -50%);
+        top: 45%;
+        left: 3%;
         white-space: nowrap;
         pointer-events: none;
         line-height: 0.8;
@@ -1647,9 +1645,8 @@ footer {
 
     .subtitle-section {
         position: absolute;
-        top: 52%;
-        left: 4%;
-        transform: translate(0, -50%);
+        top: 49%;
+        left: 3%;
         z-index: 2;
     }
 
@@ -1657,15 +1654,15 @@ footer {
         font-size: 0.8rem;
         color: #666;
         font-weight: 600;
-        letter-spacing: 0.5px;
-        text-align: left;
+        letter-spacing: -0.05px;
     }
 
     .main-visual {
-        width: 100vw;        /* 画面の幅ピッタリ */
+        width: 140%;        /* 画面の幅ピッタリ */
+        min-width: 140%;
         height: 100vh;       /* 画面の高さピッタリ */
         top: -10%;              /* 上端から */
-        left: 0;             /* 左端から */
+        left: -10%;             /* 左端から */
         transform: none;     
     }
 
@@ -1675,9 +1672,10 @@ footer {
 
     .main-visual .mobile-image {
         display: block; /* スマホ用画像を表示 */
-        width: 200%;
+        width: 100vw; /* 画面幅いっぱい */
         height: 100%;
         object-fit: cover;
+        object-position: center; /* 中央を基準に表示 */
     }
 
     .work-ip-section {
@@ -2328,13 +2326,13 @@ footer {
     /* 横スクロール防止 */
     .cover {
         width: 100vw;
-        overflow-x: hidden;
+        overflow: visible; /* 見切れた部分も表示 */
     }
     
     .cover-content {
         width: 100%;
         max-width: 100vw;
-        overflow-x: hidden;
+        overflow: visible; /* 見切れた部分も表示 */
     }
     
     .background-text {
