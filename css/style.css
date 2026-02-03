@@ -1636,8 +1636,8 @@ footer {
         letter-spacing: -0.05em;
         z-index: 1;
         font-family: 'Helvetica Neue', Arial, sans-serif;
-        top: 45%;
-        left: 3%;
+        top: 38%;
+        left: -1%;
         white-space: nowrap;
         pointer-events: none;
         line-height: 0.8;
@@ -1645,8 +1645,8 @@ footer {
 
     .subtitle-section {
         position: absolute;
-        top: 49%;
-        left: 3%;
+        top: 43%;
+        left: 0%;
         z-index: 2;
     }
 
@@ -1680,7 +1680,7 @@ footer {
 
     .work-ip-section {
         position: absolute;
-        top: 65%;
+        top: 60%;
         left: 10%;
         display: flex;
         flex-direction: column;
@@ -1704,8 +1704,9 @@ footer {
     }
     
     .skill-description {
+        position: absolute;
         max-width: 280px;
-        top:110%;
+        top:130%;
     }
     
     .skill-description p {
@@ -1850,7 +1851,7 @@ footer {
         position: absolute;
         bottom: 5px;
         left: 74%;
-        top: 55%;
+        top: 47%;
         display: flex;
         flex-direction: column;
         align-items: center;
