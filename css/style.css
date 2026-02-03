@@ -2378,7 +2378,15 @@ footer {
     .about-left {
         flex-direction: column;
         gap: 1rem;
-        text-align: center;
+        text-align: left;
+    }
+    
+    .about-icon {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        top:10%;
+        left:4%;
     }
     
     .about-right {
@@ -3273,7 +3281,7 @@ footer {
     line-height: 1.7;
     color: #333;
     text-align: left;
-    margin: 0 0 1.2rem 0; /* 段落間に余白を追加 */
+    margin: 0;
 }
 
 /* Vision Responsive */
@@ -3324,7 +3332,7 @@ footer {
         font-size: 0.95rem;
         line-height: 1.7;
         text-align: center;
-        margin: 0 0 1.2rem 0; /* 段落間に余白を追加 */
+        padding: 0;
     }
 }
 
