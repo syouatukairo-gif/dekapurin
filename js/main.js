@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'nav-works': 'Works',
             'nav-ip': 'IP',
             'nav-about': 'About',
-            'nav-skills': 'Skills',
+            'nav-skills': 'How',
             'scroll': 'SCROLL',
             'work-ip': 'Work & Original IP',
             'skill-subtitle': 'SF Visuals for Film,',
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'nav-works': '作品',
             'nav-ip': 'IP',
             'nav-about': '关于',
-            'nav-skills': '技能',
+            'nav-skills': '做法',
             'scroll': '滚动',
             'work-ip': '作品与原创IP',
             'skill-subtitle': 'SF Visuals for Film,',
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'nav-works': '작품',
             'nav-ip': 'IP',
             'nav-about': '소개',
-            'nav-skills': '기술',
+            'nav-skills': '방법',
             'scroll': '스크롤',
             'work-ip': '작품 및 오리지널 IP',
             'skill-subtitle': 'SF Visuals for Film,',
@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'nav-works': 'Works / 実績一覧',
             'nav-ip': 'IP / コンテンツ',
             'nav-about': 'About / 自己紹介',
-            'nav-skills': 'Skills / スキル',
+            'nav-skills': 'How / 進め方',
             'scroll': 'SCROLL',
             'work-ip': 'Work & Original IP',
             'skill-subtitle': 'SF Visuals for Film,',
@@ -960,59 +960,56 @@ function initWorkCategories() {
 const skillsData = {
     'character': {
         title: 'キャラクター制作',
-        subtitle: '用途と文脈から機能性を追求したキャラクターデザイン',
         workflow: [
             {
-                image: 'images/skill_character_1.png',
-                description: '使用環境と役割を明確化し、動作要件とデザインの方向性を同時に定義。機能性を優先した設計思想を基に、キャラクターの基本構造を決定します。'
+                image: 'images/work71.png',
+                description: 'まず最初にどのような用途で、なぜそれをするのかを話し合い製作において齟齬が生じないようにします。今回は3DCGと実写の融合そしてすでにデザインが仕上がっているモデルの作成でした。'
             },
             {
-                image: 'images/skill_character_2.png',
-                description: '動作範囲と用途を考慮した骨格構造を設計。企業ロゴや象徴要素を自然に組み込みつつ、機能美として成立するシルエットを追求します。'
+                image: 'images/work78.png',
+                description: '次にラフをお送りいたしまして、ご意見やご要望を頂きます。ラフ絵だったり最初からいきなりラフの3Dを送ることもできます。（今回はビジュアルが確定していたので3D）'
             },
             {
-                image: 'images/skill_character_3.png',
-                description: '実際の動作を想定したモデリングと、表現に必要な可動域を確保するリギングを同時進行。用途に応じたポリゴン数とテクスチャ仕様を決定します。'
+                image: 'images/work81.png',
+                description: '一番こだわりたい部分などの緻密な本製作を開始いたします'
             },
             {
-                image: 'images/skill_character_4.png',
-                description: '使用環境の光条件を考慮したマテリアル設定。実際のレンダリング環境での見え方を検証しながら、質感の最適化と表現の調整を行います。'
+                image: 'images/work76.png',
+                description: 'お客様の許可が下り次第、実際に動かせるようにリギング、色味を確定させるためにシェーダーを組んでいきます。'
             },
             {
-                image: 'images/skill_character_5.png',
+                image: 'images/work77.png',
                 description: '映像や展示での実際の使用を想定した最終調整。用途に応じたフォーマット出力と、実運用でのパフォーマンスを確認し完成させます。'
             }
         ]
     },
     'video': {
         title: '映像撮影・編集・制作',
-        subtitle: '目的と媒体特性から最適な映像表現を設計',
         workflow: [
             {
-                image: 'images/skill_video_1.png',
-                description: '伝えたい情報と使用環境から逆算し、映像の構成とテンポを設計。ファーストビューでの印象や展示空間での効果を考慮した方向性を決定します。'
+                image: 'images/work37.png',
+                description: 'クライアントから提示された参考映像をもとに、学校として伝えたい印象やトーンを共有しました。'
             },
             {
-                image: 'images/skill_video_2.png',
-                description: '実写とCGの融合を前提に、撮影計画と3D制作を並行して準備。光の方向性やカメラワークを統一し、シームレスな表現を構築します。'
+                image: 'images/work83.png',
+                description: '学校のロゴや既存ビジュアル、素材などをもらい受けそれらを元に構想を練ります。'
             },
             {
-                image: 'images/skill_video_3.png',
-                description: '設計した構成に基づき実撮影とCG制作を実施。音楽との同期を意識しながら、各シーンのインパクトと全体の流れを同時に追求します。'
+                image: 'images/work82.png',
+                description: '構成やカットの流れを簡易的な映像ラフとして作成。動きの方向性や情報量を確認し、ファーストビューとして過不足がないかを検討しました。'
             },
             {
-                image: 'images/skill_video_4.png',
-                description: '音ハメやリズムを重視した編集作業。全体のテンポと各シーンのつながりを調整し、視聴者の注意を引き続ける構成を最適化します。'
+                image: 'images/work84.png',
+                description: 'クライアントからのフィードバックをもとに、テンポや演出を調整。Web上での見え方を意識しながら、細かな修正を重ねました。'
             },
             {
-                image: 'images/skill_video_5.png',
-                description: 'Webサイトや展示での実際の使用を想定した最終調整。使用環境に応じたフォーマットと画質設定で、最適な視聴体験を提供します。'
+                image: 'images/work4.png',
+                description: '最終映像を書き出し、Webサイトのファーストビュー用映像として納品。実際の掲載環境を想定し、ループ再生時の違和感が出ないよう最終調整を行いました。'
             }
         ]
     },
     'concept': {
         title: 'コンセプト設計',
-        subtitle: '制約と目的から制作の方向性を構造化',
         workflow: [
             {
                 image: 'images/skill_concept_1.png',
@@ -1078,12 +1075,72 @@ function openSkillsModal(skillType) {
     
     // Set workflow items
     skill.workflow.forEach((item, index) => {
-        const imageElement = document.getElementById(`workflowImage${index + 1}`);
+        const imageContainer = document.getElementById(`workflowImage${index + 1}`).parentElement;
         const descElement = document.getElementById(`workflowDesc${index + 1}`);
+        const titleElement = document.querySelector(`#workflowImage${index + 1}`).closest('.workflow-item').querySelector('h4');
         
-        imageElement.src = item.image;
-        imageElement.alt = skill.title + ' - ' + (index + 1);
-        descElement.textContent = item.description;
+        // Clear existing images
+        imageContainer.innerHTML = '';
+        
+        // Set workflow title based on skill type
+        const workflowTitles = {
+            'character': [
+                '① ヒアリング',
+                '② ラフ製作', 
+                '③ 本製作',
+                '④ リギングやシェーダー',
+                '⑤ 完成、運用'
+            ],
+            'video': [
+                '① ヒアリング',
+                '② 素材収集',
+                '③ ラフ製作',
+                '④ 修正',
+                '⑤ 完成、運用'
+            ]
+        };
+        
+        if (workflowTitles[skillType] && workflowTitles[skillType][index]) {
+            titleElement.textContent = workflowTitles[skillType][index];
+        }
+        
+        if (Array.isArray(item.image)) {
+            // Multiple images - create carousel
+            item.image.forEach((imgSrc, imgIndex) => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = skill.title + ' - ' + (index + 1) + '-' + (imgIndex + 1);
+                img.className = 'workflow-image-multiple';
+                if (imgIndex === 0) img.style.display = 'block';
+                else img.style.display = 'none';
+                imageContainer.appendChild(img);
+            });
+            
+            // Add navigation if multiple images
+            if (item.image.length > 1) {
+                const leftNav = document.createElement('div');
+                leftNav.className = 'workflow-nav workflow-nav-left';
+                leftNav.innerHTML = '&#10094;';
+                leftNav.onclick = () => navigateWorkflowImage(index, -1);
+                
+                const rightNav = document.createElement('div');
+                rightNav.className = 'workflow-nav workflow-nav-right';
+                rightNav.innerHTML = '&#10095;';
+                rightNav.onclick = () => navigateWorkflowImage(index, 1);
+                
+                imageContainer.appendChild(leftNav);
+                imageContainer.appendChild(rightNav);
+            }
+        } else {
+            // Single image
+            const img = document.createElement('img');
+            img.src = item.image;
+            img.alt = skill.title + ' - ' + (index + 1);
+            img.id = `workflowImage${index + 1}`;
+            imageContainer.appendChild(img);
+        }
+        
+        descElement.innerHTML = item.description;
     });
     
     // Show modal
@@ -1095,6 +1152,31 @@ function openSkillsModal(skillType) {
 function closeSkillsModal() {
     document.getElementById('skillsModal').classList.remove('active');
     document.body.style.overflow = 'auto';
+}
+
+// Workflow image navigation
+function navigateWorkflowImage(workflowIndex, direction) {
+    const imageContainer = document.getElementById(`workflowImage${workflowIndex + 1}`).parentElement;
+    const images = imageContainer.querySelectorAll('.workflow-image-multiple');
+    
+    if (images.length === 0) return;
+    
+    // Find current visible image
+    let currentIndex = -1;
+    images.forEach((img, index) => {
+        if (img.style.display === 'block') {
+            currentIndex = index;
+        }
+    });
+    
+    // Calculate next index
+    let nextIndex = currentIndex + direction;
+    if (nextIndex < 0) nextIndex = images.length - 1;
+    if (nextIndex >= images.length) nextIndex = 0;
+    
+    // Hide current, show next
+    images[currentIndex].style.display = 'none';
+    images[nextIndex].style.display = 'block';
 }
 
 // Initialize skills modal when DOM is loaded
