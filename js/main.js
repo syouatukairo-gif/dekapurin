@@ -864,33 +864,33 @@ function initWorkCategories() {
     // Work data for each category (9 items each)
     const worksGridData = {
         all: [
-            { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', description: '卒業展示作品のプロジェクションマッピング映像', year: '2024', image: 'images/work2.png' },
-            { title: '祇園銀座百鬼夜行<br>三菱銀行展示', description: '個展向け新作映像の制作と展示', year: '2024', image: 'images/work1.png' },
-            { title: 'metaherose様万博用キャラクター製作', description: '大阪・関西万博出展用キャラクター制作', year: '2024', image: 'images/work3.png' },
-            { title: '香蘭ファッションデザイン専門学校様', description: '公式Webページ用ファーストビュー映像', year: '2023', image: 'images/work4.png' },
-            { title: 'CGWORLD 2024年6月号 掲載', description: 'CGWORLD誌に作品が掲載されました', year: '2023', image: 'images/work25.png' },
-            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', description: '審査員賞を受賞したプロジェクションマッピング', year: '2024', image: 'images/work41.png' },
-            { title: 'CHASE', description: '都市探検をテーマにした自主制作映像', year: '2024', image: 'images/work28.png' },
-            { title: 'U30 3DCG Vision Contest 2022', description: 'コンテスト向けに制作したバイク映像', year: '2024', image: 'images/work9.png' },
-            { title: 'オリジナルキャラクター制作', description: '個人コンテンツ用キャラクターの研究制作', year: '2023', image: 'images/work58.png' },
-            { title: 'ハードサーフィスキャラクター製作1', description: '機能性を追求した四足歩行ロボット', year: '2024', image: 'images/work16.png' }
+            { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', description: '48秒のVFX映像作品', year: '2024', image: 'images/work2.png' },
+            { title: '祇園銀座百鬼夜行<br>三菱銀行展示', description: '37秒のVFX映像作品', year: '2024', image: 'images/work1.png' },
+            { title: 'metaherose様万博用キャラクター製作', description: '企業のキャラクター製作', year: '2024', image: 'images/work3.png' },
+            { title: '香蘭ファッションデザイン専門学校様', description: 'Webページ用ループ動画', year: '2023', image: 'images/work4.png' },
+            { title: 'CGWORLD 2024年6月号 掲載', description: '40秒のフルCG映像作品', year: '2023', image: 'images/work25.png' },
+            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', description: '1分30秒のプロジェクションマッピング映像作品', year: '2024', image: 'images/work41.png' },
+            { title: 'CHASE', description: '2分のフルCG映像作品', year: '2024', image: 'images/work28.png' },
+            { title: 'U30 3DCG Vision Contest 2022', description: '30秒のフルCG映像作品', year: '2024', image: 'images/work9.png' },
+            { title: 'オリジナルキャラクター制作', description: '人物キャラクター研究制作', year: '2023', image: 'images/work58.png' },
+            { title: 'ハードサーフィスキャラクター製作1', description: '機械、仕組みに重きを置いたキャラクター製作', year: '2024', image: 'images/work16.png' }
         ],
         work: [
-            { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', description: '卒業展示作品のプロジェクションマッピング映像', year: '2024', image: 'images/work2.png' },
-            { title: '祇園銀座百鬼夜行<br>三菱銀行展示', description: '個展向け新作映像の制作と展示', year: '2024', image: 'images/work1.png' },
-            { title: 'metaherose様万博用キャラクター製作', description: '大阪・関西万博出展用キャラクター制作', year: '2024', image: 'images/work3.png' },
-            { title: '香蘭ファッションデザイン専門学校様', description: '公式Webページ用ファーストビュー映像', year: '2023', image: 'images/work4.png' }
+            { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', description: '48秒のVFX映像作品', year: '2024', image: 'images/work2.png' },
+            { title: '祇園銀座百鬼夜行<br>三菱銀行展示', description: '37秒のVFX映像作品', year: '2024', image: 'images/work1.png' },
+            { title: 'metaherose様万博用キャラクター製作', description: '企業のキャラクター製作', year: '2024', image: 'images/work3.png' },
+            { title: '香蘭ファッションデザイン専門学校様', description: 'Webページ用ループ動画', year: '2023', image: 'images/work4.png' }
         ],
         contest: [
-            { title: 'CGWORLD 2024年6月号 掲載', description: 'CGWORLD誌に作品が掲載されました', year: '2023', image: 'images/work25.png', workId: 'work5' },
-            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', description: '審査員賞を受賞したプロジェクションマッピング', year: '2024', image: 'images/work41.png', workId: 'work6' },
-            { title: '大阪芸術大学ダヴィンチコンテスト 審査員賞', description: '手描きアニメーションで審査員賞を受賞', year: '2024', image: 'images/work14.png', workId: 'work14' }
+            { title: 'CGWORLD 2024年6月号 掲載', description: '40秒のフルCG映像作品', year: '2023', image: 'images/work25.png', workId: 'work5' },
+            { title: '東京国際プロジェクションマッピングアワードvol.10 審査員賞', description: '1分30秒のプロジェクションマッピング映像作品', year: '2024', image: 'images/work41.png', workId: 'work6' },
+            { title: '大阪芸術大学ダヴィンチコンテスト 審査員賞', description: '5分の手書きアニメーション作品', year: '2024', image: 'images/work14.png', workId: 'work14' }
         ],
         personal: [
-            { title: 'オリジナルキャラクター制作', description: '個人コンテンツ用キャラクターの研究制作', year: '2023', image: 'images/work58.png', workId: 'work9' },
-            { title: 'ハードサーフィスキャラクター製作1', description: '機能性を追求した四足歩行ロボット', year: '2024', image: 'images/work16.png', workId: 'work10' },
-            { title: 'CHASE', description: '都市探検をテーマにした自主制作映像', year: '2024', image: 'images/work28.png', workId: 'work7' },
-            { title: 'U30 3DCG Vision Contest 2022', description: 'コンテスト向けに制作したバイク映像', year: '2024', image: 'images/work9.png', workId: 'work8' }
+            { title: 'オリジナルキャラクター制作', description: '人物キャラクター研究制作', year: '2023', image: 'images/work58.png', workId: 'work9' },
+            { title: 'ハードサーフィスキャラクター製作1', description: '機械、仕組みに重きを置いたキャラクター製作', year: '2024', image: 'images/work16.png', workId: 'work10' },
+            { title: 'CHASE', description: '2分のフルCG映像作品', year: '2024', image: 'images/work28.png', workId: 'work7' },
+            { title: 'U30 3DCG Vision Contest 2022', description: '30秒のフルCG映像作品', year: '2024', image: 'images/work9.png', workId: 'work8' }
         ]
     };
     
