@@ -983,6 +983,39 @@ section.cover {
     gap: 2rem;
 }
 
+.works-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 0 20px;
+}
+
+.works-description p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.works-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* スマホ用works説明文 */
+@media (max-width: 768px) {
+    .works-description {
+        max-width: 100%;
+        margin: 0 auto 1.5rem;
+        padding: 0 15px;
+    }
+    
+    .works-description p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin-bottom: 0.8rem;
+    }
+}
+
 .works-categories {
     display: flex;
     justify-content: center;
@@ -3188,6 +3221,95 @@ footer {
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* より小さい画面用のスキルグリッド調整 */
+@media (max-width: 800px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .skill-item {
+        padding: 30px;
+    }
+}
+
+/* 小型タブレット・大型スマホ用 */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* 縦1列に強制 */
+        gap: 20px;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+    
+    .skill-item {
+        padding: 25px;
+        text-align: center;
+    }
+    
+    .skill-icon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 1rem;
+    }
+    
+    .skill-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .skill-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* 小型スマホ用 */
+@media (max-width: 400px) {
+    .skills-grid {
+        padding: 0 5px;
+        gap: 15px;
+    }
+    
+    .skill-item {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+    
+    .skill-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 0.8rem;
+    }
+    
+    .skill-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .skill-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .contact-link-section {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .contact-text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-form-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 .skill-item {
