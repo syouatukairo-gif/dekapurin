@@ -3210,7 +3210,7 @@ footer {
 }
 
 .skills-description p {
-    font-size: 0.95rem; /* 1.1remから0.95remに小さく */
+    font-size: 0.95rem; /* 1.1remかdfsら0.95remに小さく */
     line-height: 1.8;
     color: #444; /* #666から#444に濃く */
 }
