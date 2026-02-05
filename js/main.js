@@ -266,10 +266,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'skill-hardsurface': 'Hard Surface',
             'skill-texturing': 'Texturing',
             'skill-lighting': 'Lighting',
-            'works-description': 'This section showcases our production portfolio by category.<br>Tap on each work to view details including production background and responsibilities.',
-            'works-description-2': 'YouTube links are provided at the bottom of detail pages,<br>and you can switch displayed images by tapping left/right on images.',
-            'contact-text': 'For inquiries, please use the form below',
-            'contact-button': 'Contact Form',
             'footer': '&copy; 2024 dekapurin. All rights reserved.'
         },
         zh: {
@@ -303,10 +299,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'skill-hardsurface': '硬表面',
             'skill-texturing': '贴图',
             'skill-lighting': '灯光',
-            'works-description': '本部分按类别展示制作作品集。<br>点击每个作品可查看制作背景和负责内容等详细信息。',
-            'works-description-2': '详情页面底部提供YouTube链接，<br>并且可以通过点击图片左右来切换显示的图片。',
-            'contact-text': '咨询时请使用以下表格',
-            'contact-button': '联系表格',
             'footer': '&copy; 2024 dekapurin. 版权所有。'
         },
         ko: {
@@ -340,10 +332,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'skill-hardsurface': '하드 서피스',
             'skill-texturing': '텍스처링',
             'skill-lighting': '라이팅',
-            'works-description': '이 섹션에서는 카테고리별 제작 실적을 게재합니다.<br>각 작품을 탭하면 제작 배경이나 담당 내용 등 상세 정보를 확인할 수 있습니다.',
-            'works-description-2': '상세 페이지 하단에는 YouTube 링크를 게재해두었으며,<br>또한 이미지 좌우를 탭하여 표시 이미지를 전환할 수 있습니다.',
-            'contact-text': '문의 시 아래 폼을 이용해 주세요',
-            'contact-button': '문의 폼',
             'footer': '&copy; 2024 dekapurin. 모든 권리 보유.'
         },
         ja: {
@@ -379,10 +367,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'skill-hardsurface': 'ハードサーフェス',
             'skill-texturing': 'テクスチャリング',
             'skill-lighting': 'ライティング',
-            'works-description': 'このセクションでは、これまでの制作実績を項目ごとに掲載しています。<br>それぞれの作品をタップすると、制作背景や担当内容などの詳細をご覧いただけます。',
-            'works-description-2': '詳細ページ下部にはYouTubeリンクを掲載しており、<br>また、画像の左右をタップすることで表示画像を切り替えることが可能です。',
-            'contact-text': 'お問い合わせの際は以下のフォームからよろしくお願いします',
-            'contact-button': 'お問い合わせフォーム',
             'footer': '&copy; 2024 dekapurin. All rights reserved.'
         }
     };
@@ -975,124 +959,52 @@ function initWorkCategories() {
 // Skills data with workflow information
 const skillsData = {
     'character': {
-        title: {
-            ja: 'キャラクター制作',
-            en: 'Character Production',
-            zh: '角色制作',
-            ko: '캐릭터 제작'
-        },
-        subtitle: {
-            ja: '用途と文脈から機能性を追求したキャラクターデザイン',
-            en: 'Character design pursuing functionality from purpose and context',
-            zh: '从用途和文脉追求功能性的角色设计',
-            ko: '용도와 문맥에서 기능성을 추구하는 캐릭터 디자인'
-        },
+        title: 'キャラクター制作',
         workflow: [
             {
                 image: 'images/work71.png',
-                description: {
-                    ja: 'まず最初にどのような用途で、なぜそれをするのかを話し合い製作において齟齬が生じないようにします。今回は3DCGと実写の融合そしてすでにデザインが仕上がっているモデルの作成でした。',
-                    en: 'First, we discuss what purpose it will serve and why, to ensure no discrepancies in production. This time it was about integrating 3DCG with live-action and creating a model with already completed design.',
-                    zh: '首先讨论用途和目的，确保制作中不会产生分歧。这次是3DCG与实拍融合，以及制作已完成设计的模型。',
-                    ko: '먼저 어떤 용도로, 왜 그것을 하는지 논의하여 제작에서 차이가 생기지 않도록 합니다. 이번에는 3DCG와 실사의 융합, 그리고 이미 디자인이 완성된 모델 제작이었습니다.'
-                }
+                description: 'まず最初にどのような用途で、なぜそれをするのかを話し合い製作において齟齬が生じないようにします。今回は3DCGと実写の融合そしてすでにデザインが仕上がっているモデルの作成でした。'
             },
             {
                 image: 'images/work78.png',
-                description: {
-                    ja: '次にラフをお送りいたしまして、ご意見やご要望を頂きます。ラフ絵だったり最初からいきなりラフの3Dを送ることもできます。（今回はビジュアルが確定していたので3D）',
-                    en: 'Next, we send rough drafts and receive your opinions and requests. We can send rough sketches or directly send rough 3D models from the start. (This time we sent 3D since the visuals were already finalized)',
-                    zh: '接下来发送草稿，听取您的意见和要求。可以发送草图或直接发送草稿3D模型。（这次因为视觉效果已确定，所以发送了3D）',
-                    ko: '다음으로 초안을 보내드리고 의견이나 요청을 받습니다. 스케치나 처음부터 바로 초안 3D를 보낼 수도 있습니다. (이번에는 비주얼이 확정되어 있어 3D를 보냈습니다)'
-                }
+                description: '次にラフをお送りいたしまして、ご意見やご要望を頂きます。ラフ絵だったり最初からいきなりラフの3Dを送ることもできます。（今回はビジュアルが確定していたので3D）'
             },
             {
-                image: ['images/work83.png', 'images/work82.png'],
-                description: {
-                    ja: '一番こだわりたい部分などの緻密な本製作を開始いたします<br><br>実写とCGの融合を前提に、撮影計画と3D制作を並行して準備。光の方向性やカメラワークを統一し、シームレスな表現を構築します。',
-                    en: 'We begin detailed production focusing on the parts you want to perfect most<br><br>Assuming integration of live-action and CG, we prepare shooting plans and 3D production in parallel. We unify lighting direction and camera work to build seamless expression.',
-                    zh: '开始精心制作最在意的部分<br><br>以实拍与CG融合为前提，并行准备拍摄计划和3D制作。统一光线方向和摄影工作，构建无缝表现。',
-                    ko: '가장 신경 쓰고 싶은 부분 등의 정밀한 본 제작을 시작합니다<br><br>실사와 CG의 융합을 전제로, 촬영 계획과 3D 제작을 병행하여 준비합니다. 빛의 방향성과 카메라 워크를 통일하여 시원less한 표현을 구축합니다.'
-                }
+                image: 'images/work81.png',
+                description: '一番こだわりたい部分などの緻密な本製作を開始いたします'
             },
             {
-                image: ['images/work82.png', 'images/work84.png'],
-                description: {
-                    ja: 'お客様の許可が下り次第、実際に動かせるようにリギング、色味を確定させるためにシェーダーを組んでいきます。<br><br>音ハメやリズムを重視した編集作業。全体のテンポと各シーンのつながりを調整し、視聴者の注意を引き続ける構成を最適化します。',
-                    en: 'Once we get client approval, we set up rigging to make it actually movable, and create shaders to determine color tones.<br><br>Editing work focusing on beat matching and rhythm. We adjust overall tempo and scene connections, optimizing composition to continuously maintain viewer attention.',
-                    zh: '获得客户许可后，设置绑定使其能够实际移动，创建着色器确定色调。<br><br>重视节拍匹配和节奏的编辑工作。调整整体节奏和场景连接，优化构图以持续吸引观众注意力。',
-                    ko: '고객의 허락이 떨어지는 대로, 실제로 움직일 수 있도록 리깅, 색감을 확정하기 위해 셰이더를 구성합니다.<br><br>비트 매칭과 리듬을 중시한 편집 작업. 전체 템포와 각 장면의 연결을 조정하여 시청자의 주의를 계속 끄는 구성을 최적화합니다.'
-                }
+                image: 'images/work76.png',
+                description: 'お客様の許可が下り次第、実際に動かせるようにリギング、色味を確定させるためにシェーダーを組んでいきます。'
             },
             {
                 image: 'images/work77.png',
-                description: {
-                    ja: '映像や展示での実際の使用を想定した最終調整。用途に応じたフォーマット出力と、実運用でのパフォーマンスを確認し完成させます。',
-                    en: 'Final adjustments assuming actual use in video and exhibitions. We output in appropriate formats according to purpose, check performance in actual operation, and complete the work.',
-                    zh: '设想在视频和展览中实际使用的最终调整。根据用途输出相应格式，确认实际运行中的性能并完成作品。',
-                    ko: '영상이나 전시에서의 실제 사용을 상정한 최종 조정. 용도에 맞는 포맷 출력과, 실제 운용에서의 성능을 확인하고 완성시킵니다.'
-                }
+                description: '映像や展示での実際の使用を想定した最終調整。用途に応じたフォーマット出力と、実運用でのパフォーマンスを確認し完成させます。'
             }
         ]
     },
     'video': {
-        title: {
-            ja: '映像撮影・編集・制作',
-            en: 'Video Shooting, Editing & Production',
-            zh: '视频拍摄、编辑与制作',
-            ko: '영상 촬영, 편집 및 제작'
-        },
-        subtitle: {
-            ja: '目的と媒体特性から最適な映像表現を設計',
-            en: 'Designing optimal video expression from purpose and media characteristics',
-            zh: '从目的和媒体特性设计最佳视频表现',
-            ko: '목적과 미디어 특성에서 최적의 영상 표현을 설계'
-        },
+        title: '映像撮影・編集・制作',
         workflow: [
             {
                 image: 'images/work37.png',
-                description: {
-                    ja: 'クライアントから提示された参考映像をもとに、学校として伝えたい印象やトーンを共有しました。',
-                    en: 'Based on reference videos presented by the client, we shared the impression and tone the school wanted to convey.',
-                    zh: '根据客户提供的参考视频，我们分享了学校想要传达的印象和基调。',
-                    ko: '클라이언트가 제시한 참고 영상을 바탕으로, 학교로서 전달하고 싶은 인상과 톤을 공유했습니다.'
-                }
+                description: 'クライアントから提示された参考映像をもとに、学校として伝えたい印象やトーンを共有しました。'
             },
             {
                 image: 'images/work83.png',
-                description: {
-                    ja: '学校のロゴや既存ビジュアル、素材などをもらい受けそれらを元に構想を練ります。',
-                    en: 'We receive the school logo, existing visuals, and materials, and develop concepts based on them.',
-                    zh: '我们接收学校标志、现有视觉和素材，并基于这些进行构思。',
-                    ko: '학교 로고나 기존 비주얼, 소재 등을 받아 그것들을 바탕으로 구상을 구상합니다.'
-                }
+                description: '学校のロゴや既存ビジュアル、素材などをもらい受けそれらを元に構想を練ります。'
             },
             {
                 image: 'images/work82.png',
-                description: {
-                    ja: '構成やカットの流れを簡易的な映像ラフとして作成。動きの方向性や情報量を確認し、ファーストビューとして過不足がないかを検討しました。',
-                    en: 'We create composition and cut flow as a simple video rough. We check movement direction and information amount, and consider whether there are any deficiencies as a first view.',
-                    zh: '将构图和镜头流程制作成简单的视频草稿。检查动作方向和信息量，考虑作为首屏是否有不足。',
-                    ko: '구성이나 컷의 흐름을 간단한 영상 러프로 작성합니다. 움직임의 방향성이나 정보량을 확인하고, 첫 뷰로서 부족함이 없는지 검토했습니다.'
-                }
+                description: '構成やカットの流れを簡易的な映像ラフとして作成。動きの方向性や情報量を確認し、ファーストビューとして過不足がないかを検討しました。'
             },
             {
                 image: 'images/work84.png',
-                description: {
-                    ja: 'クライアントからのフィードバックをもとに、テンポや演出を調整。Web上での見え方を意識しながら、細かな修正を重ねました。',
-                    en: 'Based on client feedback, we adjust tempo and direction. While being conscious of how it appears on the web, we repeated fine corrections.',
-                    zh: '基于客户反馈，调整节奏和演出。在意识到网页上显示效果的同时，反复进行细致修改。',
-                    ko: '클라이언트의 피드백을 바탕으로, 템포와 연출을 조정합니다. 웹에서의 보이는 방식을 의식하면서, 세밀한 수정을 반복했습니다.'
-                }
+                description: 'クライアントからのフィードバックをもとに、テンポや演出を調整。Web上での見え方を意識しながら、細かな修正を重ねました。'
             },
             {
                 image: 'images/work4.png',
-                description: {
-                    ja: '最終映像を書き出し、Webサイトのファーストビュー用映像として納品。実際の掲載環境を想定し、ループ再生時の違和感が出ないよう最終調整を行いました。',
-                    en: 'We export the final video and deliver it as a first-view video for the website. Assuming actual publishing environment, we made final adjustments to prevent discomfort during loop playback.',
-                    zh: '导出最终视频，作为网站首屏视频交付。设想实际发布环境，进行最终调整以防止循环播放时的不适感。',
-                    ko: '최종 영상을 내보내고, 웹사이트의 첫 뷰용 영상으로 납품합니다. 실제 게재 환경을 상정하고, 루프 재생 시 위화감이 나지 않도록 최종 조정을 했습니다.'
-                }
+                description: '最終映像を書き出し、Webサイトのファーストビュー用映像として納品。実際の掲載環境を想定し、ループ再生時の違和感が出ないよう最終調整を行いました。'
             }
         ]
     },
@@ -1164,9 +1076,8 @@ function openSkillsModal(skillType) {
     }
     
     // Set modal content
-    const currentLang = currentLanguage || 'ja';
-    document.getElementById('skillModalTitle').textContent = skill.title[currentLang] || skill.title.ja;
-    document.getElementById('skillModalSubtitle').textContent = skill.subtitle[currentLang] || skill.subtitle.ja;
+    document.getElementById('skillModalTitle').textContent = skill.title;
+    document.getElementById('skillModalSubtitle').textContent = skill.subtitle;
     
     // Set workflow items
     skill.workflow.forEach((item, index) => {
@@ -1235,7 +1146,7 @@ function openSkillsModal(skillType) {
             imageContainer.appendChild(img);
         }
         
-        descElement.innerHTML = item.description[currentLang] || item.description.ja;
+        descElement.innerHTML = item.description;
     });
     
     // Show modal
