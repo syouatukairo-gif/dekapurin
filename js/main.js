@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'skill-heading-2': '原创IP制作（Original IP）',
             'skill-desc-3': '我们使用自己的世界观制作原创视频作品。以完成的作品为起点，通过预订销售的形式开发续集和扩展元素，持续发展作品世界本身。',
             'about-title': '关于',
-            'about-desc': '以Blender和DaVinci Resolve为中心的影像制作，<br>包括共同制作在内的20部以上影像作品和3D模型制作。<br>2025年开始作为自由职业者从事影像制作和3D建模工作。',
+            'about-desc': '以Blender和DaVinci Resolve为中心的影像制作，包括共同制作在内的20部以上影像作品和3D模型制作。<br>2025年开始作为自由职业者从事影像制作和3D建模工作。',
             'history-title': '履历',
             'year-2021': '2021年',
             'detail-2021': '4月 奈良工业高等专门学校 电子控制工程系 入学',
