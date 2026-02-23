@@ -873,7 +873,7 @@ function initWorkCategories() {
             { title: 'CHASE', description: '2分のフルCG映像作品', year: '2024', image: 'images/work28.png' },
             { title: 'U30 3DCG Vision Contest 2022', description: '30秒のフルCG映像作品', year: '2024', image: 'images/work9.png' },
             { title: 'オリジナルキャラクター制作', description: '人物キャラクター研究制作', year: '2023', image: 'images/work58.png' },
-            { title: 'ハードサーフィスキャラクター製作1', description: '機械、仕組みに重きを置いたキャラクター製作', year: '2024', image: 'images/work16.png' }
+            { title: 'ハードサーフィスキャラクター製作1', description: '機械、仕組みに重きを置いたキャラクター製作', year: '2024', image: 'images/74.png' }
         ],
         work: [
             { title: '祇園銀座百鬼夜行<br>京都市立芸術大学展示', description: '48秒のVFX映像作品', year: '2024', image: 'images/work2.png' },
@@ -888,7 +888,7 @@ function initWorkCategories() {
         ],
         personal: [
             { title: 'オリジナルキャラクター制作', description: '人物キャラクター研究制作', year: '2023', image: 'images/work58.png', workId: 'work9' },
-            { title: 'ハードサーフィスキャラクター製作1', description: '機械、仕組みに重きを置いたキャラクター製作', year: '2024', image: 'images/work16.png', workId: 'work10' },
+            { title: 'ハードサーフィスキャラクター製作1', description: '機械、仕組みに重きを置いたキャラクター製作', year: '2024', image: 'images/74.png', workId: 'work10' },
             { title: 'CHASE', description: '2分のフルCG映像作品', year: '2024', image: 'images/work28.png', workId: 'work7' },
             { title: 'U30 3DCG Vision Contest 2022', description: '30秒のフルCG映像作品', year: '2024', image: 'images/work9.png', workId: 'work8' }
         ]
@@ -1337,7 +1337,7 @@ const worksData = {
     'work10': {
         title: 'ハードサーフィスキャラクター1',
         year: '2026',
-        images: ['images/work16.png', 'images/25.png', 'images/work49.png', 'images/work48.png'],
+        images: ['images/74.png', 'images/25.png', 'images/work49.png', 'images/work48.png'],
         videoLink: 'https://youtu.be/d2KwTnd51R0',
         description: `
             <h4>概要</h4>
